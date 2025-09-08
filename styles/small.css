@@ -1,7 +1,7 @@
 :root{
   --color1: #b4a497;
   --color2: #f5b1c3;
-  --color3: #3a73a3;  /* original: #75b1e7 */
+  --color3: #315b7c;  /* original: #75b1e7 */
   --color4: #484846;
 }
 
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 nav li.current {
-    background-color: #315b7c;
+    background-color: var(--color3);
 }
 nav.show {
     display:block;
@@ -142,7 +142,7 @@ section ul {
 }
 
 #filter-list button.current {
-    background-color: #294861;
+    background-color: var(--color3);
     color: white;
 }
 
