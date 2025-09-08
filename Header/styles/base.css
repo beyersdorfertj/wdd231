@@ -1,0 +1,116 @@
+:root{
+  --color1: #b4a497;
+  --color2: #f5b1c3;
+  --color3: #3a73a3;  /* original: #75b1e7 */
+  --color4: #484846;
+}
+
+/*********************** HEADER *****************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;  /* 44px is the minimum touch size for handhold device */
+    align-items: end;
+    padding: 5px 0 5px 10px;
+    border-bottom:  solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2em;
+    color: var(--color4);
+}
+
+/*********************** NAVIGATION *****************/
+
+nav {
+    display: none;
+    background-color: var(--color1);
+    margin: 0 auto;
+    max-width: 800px;
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        padding: 1em;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: solid 1px #ddd;
+    }
+
+    & a:hover {
+        background-color: var(--color2);
+    }
+
+    .active {
+        color: yellow;
+    }
+
+    li.current {
+        background-color: #484846;
+    }
+}
+
+nav.show {
+    display: block;
+}
+
+/*********************** HANBURGER *****************/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color4);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before {
+    content: "\2630";
+    font-size: 2em;
+}
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/*********************** FOOTER *****************/
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    color: green;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border: #ccc solid 1px;
+        border-radius: 4px;
+        color: red;
+    }
+
+    a:hover {
+        background-color: #ddd;
+    }
+
+    img {
+        width: 22px;
+        height: 22px;
+    }
+}

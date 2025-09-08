@@ -1,0 +1,31 @@
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;     /* zentrieren */
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+	nav {
+        display: block;
+        border-bottom: solid 1px #ddd;
+    
+        ul {
+	    	display: flex;
+        }
+
+        a {
+            border: none;
+        }
+    }
+
+    _li {
+        flex: 1 1 100%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

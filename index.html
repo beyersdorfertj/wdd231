@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <title>WDD 132 - Web Frontend Development I - Jörg Beyersdorfer</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals course portfolio by Thomas Jörg Beyersdorfer. Features personal projects, web development resources, and assignments showcasing HTML, CSS, JavaScript skills and responsive design techniques learned at Brigham Young University."/>
+    <link rel="stylesheet" href="styles/nomalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/houses-logo.svg" alt="Site Logo" width="24" height="24">
+        <span>Thomas's Site Title</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita tempora nemo magni dolorem accusamus quisquam, voluptatibus assumenda laboriosam quod blanditiis obcaecati corrupti sapiente veniam modi praesentium animi consequatur vero. Sed fugiat explicabo earum voluptates nesciunt illum quasi totam accusantium molestias, quia consectetur veniam quaerat nobis dolor corporis suscipit ratione!</p>
+        </section>
+        <section id="student-photo">
+            <h2>Student Photo</h2>
+            <img src="images/profile25.jpg" alt="Foto of Thomas Jörg Beyersdorfer">
+        </section>
+        <section id="courses">
+            <h2>Web Certificate Courses</h2>
+            <ul id="filter-list">
+                <li><button id="filter-all-btn">All Courses</button></li>
+                <li><button id="filter-cse-btn">CSE Courses</button></li>
+                <li><button id="filter-wdd-btn">WDD Courses</button></li>
+            </ul>
+            <ul id="course-list">
+            </ul>
+            <span id="total-credits">The total credits for course listed above is 6</span>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="images/github.svg" alt="GitHub" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="images/whatsapp.svg" alt="WhatsApp" width="44" height="44"></a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> - Thomas Jörg Beyersdorfer - Germany</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
