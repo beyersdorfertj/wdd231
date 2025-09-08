@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 nav li.current {
-    background-color: var(--color3);
+    background-color: #315b7c;
 }
 nav.show {
     display:block;
