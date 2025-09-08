@@ -142,7 +142,7 @@ section ul {
 }
 
 #filter-list button.current {
-    background-color: var(--color3);
+    background-color: #294861;
     color: white;
 }
 
@@ -168,7 +168,7 @@ section ul {
 }
 
 #course-list li.completed p {
-    background-color: #d4edda; /* Grüner Hintergrund auch für p */
+    background-color: #e3f5e7; /* Grüner Hintergrund auch für p */
     color: #155724;            /* Dunkelgrüne Schrift */
 }
 
