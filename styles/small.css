@@ -148,6 +148,11 @@ section h2 {
     margin-top: 10px;
 }
 
+#student-photo img {
+    width: 100%;
+    height: auto;
+}
+
 /**************************** FOOTER ****************************/
 footer {
     background-color: var(--Item);
