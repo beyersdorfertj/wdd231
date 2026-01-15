@@ -15,7 +15,7 @@ header {
     grid-template-columns: 24px auto 44px;
     column-gap: 8px;
     align-items: center;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px var(--ItemSelect);
 }
 
 header img {
@@ -78,7 +78,7 @@ header span {
     padding: 0.8rem 10px;
     color:  var(--color3);
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px var(--ItemSelect);
 }
 .navigation li.current {
     background-color: var(--ItemSelect);
@@ -127,11 +127,11 @@ section.view-list {
 
     
     section.view-list:nth-child(odd) {
-        background-color: #d0d1e3;
+        background-color: var(--ItemSelect);
     }
     
     section.view-list:nth-child(even) {
-        background-color: #b8b9cb;
+        background-color: var(--ItemHover);
     }
 
 section.view-list img {
