@@ -46,7 +46,8 @@ header span {
     align-items: center;
 }
 
-#toggle-view-btn, #ham-btn {
+#toggle-view-btn,
+#ham-btn {
     background: none;
     border: none;
     color: var(--color3);
@@ -57,6 +58,7 @@ header span {
 #toggle-view-btn.view-list:after {
     content: "⊞";
 }
+
 #toggle-view-btn.view-table:after {
     content: "▤";
 }
@@ -65,24 +67,29 @@ header span {
 .navigation {
     display: none;
 }
+
 .navigation.show {
     display: block;
 }
+
 .navigation ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 .navigation a {
-    display:block;
+    display: block;
     padding: 0.8rem 10px;
-    color:  var(--color3);
+    color: var(--color3);
     text-decoration: none;
     border-bottom: solid 1px var(--ItemSelect);
 }
+
 .navigation li.current {
     background-color: var(--ItemSelect);
 }
+
 .navigation a:hover {
     background-color: var(--ItemHover);
 }
@@ -111,7 +118,7 @@ section.view-table {
     align-items: center;
     padding: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
-    background-color: #b8b9cb;
+    background-color: var(--ItemHover);
 }
 
 section.view-list {
@@ -121,18 +128,16 @@ section.view-list {
     align-items: center;
     padding: 0.5rem;
     border-bottom: 1px solid rgb(0 0 0 / 10%);
-    background-color: #b8b9cb;
     text-align: left;
 }
 
-    
-    section.view-list:nth-child(odd) {
-        background-color: var(--ItemSelect);
-    }
-    
-    section.view-list:nth-child(even) {
-        background-color: var(--ItemHover);
-    }
+section.view-list:nth-child(odd) {
+    background-color: var(--ItemSelect);
+}
+
+section.view-list:nth-child(even) {
+    background-color: var(--ItemHover);
+}
 
 section.view-list img {
     display: none;
@@ -142,7 +147,9 @@ section.view-list h2 {
     margin: 0.25rem 0;
 }
 
-#companies p, h2, a {
+#companies p,
+h2,
+a {
     text-align: center;
 }
 
@@ -157,7 +164,8 @@ main {
 
 footer {
     display: grid;
-    grid-template-columns: auto auto auto;;
+    grid-template-columns: auto auto auto;
+    ;
     align-items: center;
     background-color: var(--Item);
     padding: 1rem 0px;
@@ -177,20 +185,23 @@ footer p {
     justify-content: center;
     column-gap: 8px;
 }
+
 .social a {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border: 1px var(--ItemHover) solid;
     border-radius: 4px;
     background-color: var(--ItemSelect);
-    width:64px;
+    width: 64px;
     height: 64px;
 }
+
 .social img {
     width: 44px;
     height: 44px;
 }
+
 .social a:hover {
     background-color: var(--ItemHover);
 }
