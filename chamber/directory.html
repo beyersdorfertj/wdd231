@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../images/houses-logo.png" type="image/x-icon">
+    <title>WDD 231 - Chamber Directory - Jörg Beyersdorfer</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/chamber/">
+    <meta property="og:title" content="WDD 231 - Chamber Directory - Jörg Beyersdorfer">
+    <meta property="og:description"
+        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/chamber/images/chamber-preview.svg">
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-lage.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/houses-logo.svg" alt="Site Logo" width="24" height="24">
+        <span>Friedrichsdorf Chamber of Commerce</span>
+        <button id="ham-btn" title="Navigation" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="current"><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="dir-title">
+            <h1>Chamber Members</h1>
+            <button id="toggle-view-btn" title="Toggle View" class="view-list" aria-label="Toggle menber view"></button>
+        </div>
+        <div id="companies"></div>
+    </main>
+    <footer>
+        <section>
+            <h2>Friedrichsdorf</h2>
+            <h2>Chamber of Comerce</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@friedrichsdorf-chamber.de</p>
+            <p>+49 6172 999-0</p>
+        </section>
+        <section class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </section>
+        <section>
+            <p>WDD231 Class Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Friedrichsdorf Chamber of Comerce</p>
+            <p id="lastModified"></p>
+        </section>
+    </footer>
+</body>
+
+</html>

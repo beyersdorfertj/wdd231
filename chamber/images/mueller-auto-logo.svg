@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="#315b7c" />
+    <ellipse cx="100" cy="100" rx="70" ry="40" fill="#b4a497" />
+    <rect x="60" y="75" width="80" height="50" fill="#b4a497" />
+    <rect x="70" y="85" width="25" height="20" rx="2" fill="#484846" opacity="0.3" />
+    <rect x="105" y="85" width="25" height="20" rx="2" fill="#484846" opacity="0.3" />
+    <circle cx="75" cy="125" r="15" fill="#484846" />
+    <circle cx="75" cy="125" r="8" fill="#eee" />
+    <circle cx="125" cy="125" r="15" fill="#484846" />
+    <circle cx="125" cy="125" r="8" fill="#eee" />
+    <text x="100" y="170" font-family="Arial, sans-serif" font-size="24" font-weight="bold"
+        fill="#fff" text-anchor="middle">MÜLLER</text>
+</svg>

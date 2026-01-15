@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="#f5b1c3" />
+    <path
+        d="M 50 110 Q 50 80 70 70 Q 80 65 90 70 Q 95 60 100 60 Q 105 60 110 70 Q 120 65 130 70 Q 150 80 150 110 Z"
+        fill="#b4a497" />
+    <rect x="55" y="110" width="90" height="40" rx="5" fill="#b4a497" />
+    <circle cx="75" cy="90" r="8" fill="#fff" opacity="0.6" />
+    <circle cx="100" cy="85" r="8" fill="#fff" opacity="0.6" />
+    <circle cx="125" cy="90" r="8" fill="#fff" opacity="0.6" />
+    <text x="100" y="175" font-family="Arial, sans-serif" font-size="22" font-weight="bold"
+        fill="#484846" text-anchor="middle">SCHMIDT</text>
+</svg>

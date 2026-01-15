@@ -1,0 +1,39 @@
+/* Responsive Design für größere Bildschirme */
+@media (min-width: 768px) {
+header, main, nav, footer {
+    max-width: 900px;
+}
+
+header {
+    grid-template-columns: 24px auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+}
+.navigation ul {
+    display: flex;
+}
+.navigation a {
+    border: none;
+}    #companies:has(section.view-table) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    #companies:has(section.view-list) {
+        gap: 0;
+    }
+    
+    section.view-list {
+        grid-template-columns: 2fr 2fr 1fr 2fr;
+        gap: 0;
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+    }
+
+}

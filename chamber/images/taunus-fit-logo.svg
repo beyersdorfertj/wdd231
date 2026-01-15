@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="#315b7c" />
+    <rect x="40" y="90" width="15" height="20" rx="3" fill="#f5b1c3" />
+    <rect x="55" y="85" width="10" height="30" fill="#f5b1c3" />
+    <rect x="65" y="75" width="20" height="50" rx="5" fill="#f5b1c3" />
+    <rect x="85" y="95" width="30" height="10" fill="#f5b1c3" />
+    <rect x="115" y="75" width="20" height="50" rx="5" fill="#f5b1c3" />
+    <rect x="135" y="85" width="10" height="30" fill="#f5b1c3" />
+    <rect x="145" y="90" width="15" height="20" rx="3" fill="#f5b1c3" />
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="28" font-weight="bold"
+        fill="#fff" text-anchor="middle">TAUNUS</text>
+    <text x="100" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold"
+        fill="#f5b1c3" text-anchor="middle">FIT</text>
+</svg>

@@ -30,22 +30,35 @@ header span {
     color: var(--color3);
 }
 
-.hamburger {
+#ham-btn::after {
+    content: "☰";
+}
+
+#ham-btn.show::after {
+    content: "×";
+}
+
+/******************************* MAIN *******************************/
+#dir-title {
+    display: grid;
+    grid-template-columns: auto 44px;
+    column-gap: 8px;
+    align-items: center;
+}
+
+#toggle-view-btn, #ham-btn {
     background: none;
     border: none;
     color: var(--color3);
-    width: 44px;
-    height: 44px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
 }
 
-.hamburger::after {
-    content: "\2630";
-    font-size: 2rem;
+#toggle-view-btn.view-list:after {
+    content: "⊞";
 }
-
-.hamburger.show::after {
-    content: "\00D7";
+#toggle-view-btn.view-table:after {
+    content: "▤";
 }
 
 /**************************** NAVIGATION ****************************/
@@ -74,95 +87,91 @@ header span {
     background-color: var(--ItemHover);
 }
 
-/**************************** MAIN ****************************/
+/***************************** MAIN *************************************/
 h1 {
     color: var(--color4);
 }
 
-section {
+/*************************** COMPANIES **********************************/
+#companies:has(section.view-table) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+}
+
+#companies:has(section.view-list) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    gap: 0.2rem;
 }
 
-section h2 {
-    background-color: var(--color4);
-    color: #fff;
-    text-align: center;
-    padding: 0.5em;
-    margin: 0;
-}
-
-#filter-list {
-    list-style: none;
-    display: flex;
-    gap: 5px;
-    padding: 0;
-}
-
-#filter-list li {
-    flex: 1;
-}
-
-#filter-list button {
-    width: 100%;
-    height: 100%;
-    padding: 0.5em;
-    background-color: var(--Item);
-}
-#filter-list button.current {
-    background-color: var(--ItemSelect);
-}
-#filter-list button:hover {
-    background-color: var(--ItemHover);
-}
-
-#course-list {
+section.view-table {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    gap: 10px;
-}
-#course-list li {
-    border: 1px solid var(--color4);
-    display: flex;
-}
-#course-list li p {
-    background-color: var(--Item);
-    margin: 0;
-    padding: 0.5em;
-    flex: 1;
-}
-#course-list li.completed {
-    border-color: #28a745;
-}
-#course-list li.completed p {
-    background-color: #e3f5e7;
-    color: #155724;
-}
-#course-list li.completed p::before {
-    content: "✅ ";           /* Häkchen mit CSS */
-}
-#total-credits {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: #b8b9cb;
 }
 
-#student-photo img {
-    width: 100%;
-    height: auto;
+section.view-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    background-color: #b8b9cb;
+    text-align: left;
+}
+
+    
+    section.view-list:nth-child(odd) {
+        background-color: #d0d1e3;
+    }
+    
+    section.view-list:nth-child(even) {
+        background-color: #b8b9cb;
+    }
+
+section.view-list img {
+    display: none;
+}
+
+section.view-list h2 {
+    margin: 0.25rem 0;
+}
+
+#companies p, h2, a {
+    text-align: center;
+}
+
+#companies p {
+    margin: 0;
 }
 
 /**************************** FOOTER ****************************/
+main {
+    margin-bottom: 0.5rem;
+}
+
 footer {
+    display: grid;
+    grid-template-columns: auto auto auto;;
+    align-items: center;
     background-color: var(--Item);
     padding: 1rem 0px;
     text-align: center;
 }
+
+footer h2 {
+    margin: 5px;
+}
+
+footer p {
+    margin: 2px;
+}
+
 .social {
     display: flex;
     justify-content: center;

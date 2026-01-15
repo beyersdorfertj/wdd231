@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Philipp Reis Ltd.",
+        "address": "Hugenottenstraße 103, 61381 Friedrichsdorf",
+        "phone": "+49 6172 7099-0",
+        "website": "https://www.philipp-reis.de",
+        "imageUrl": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&h=300&fit=crop",
+        "logo": "images/philipp-reis-logo.svg",
+        "membershipLevel": 3,
+        "category": "Telecommunications",
+        "yearFounded": 1995,
+        "employees": 150
+    },
+    {
+        "name": "Friedrichsdorf Bakery Schmidt",
+        "address": "Hauptstraße 45, 61381 Friedrichsdorf",
+        "phone": "+49 6172 123456",
+        "website": "https://www.baeckerei-schmidt-friedrichsdorf.de",
+        "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop",
+        "logo": "images/bakery-schmidt-logo.svg",
+        "membershipLevel": 1,
+        "category": "Food & Beverage",
+        "yearFounded": 1978,
+        "employees": 25
+    },
+    {
+        "name": "TechSolutions Friedrichsdorf",
+        "address": "Industriestraße 12, 61381 Friedrichsdorf",
+        "phone": "+49 6172 987654",
+        "website": "https://www.techsolutions-fd.de",
+        "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
+        "logo": "images/techsolutions-logo.svg",
+        "membershipLevel": 2,
+        "category": "IT Services",
+        "yearFounded": 2010,
+        "employees": 45
+    },
+    {
+        "name": "Müller Auto Center",
+        "address": "Homburger Straße 78, 61381 Friedrichsdorf",
+        "phone": "+49 6172 345678",
+        "website": "https://www.autohaus-mueller-friedrichsdorf.de",
+        "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop",
+        "logo": "images/mueller-auto-logo.svg",
+        "membershipLevel": 2,
+        "category": "Automotive",
+        "yearFounded": 1985,
+        "employees": 60
+    },
+    {
+        "name": "Taunus Pharmacy",
+        "address": "Bahnstraße 22, 61381 Friedrichsdorf",
+        "phone": "+49 6172 456789",
+        "website": "https://www.taunus-apotheke-friedrichsdorf.de",
+        "imageUrl": "https://images.unsplash.com/photo-1576602976047-174e57a47881?w=400&h=300&fit=crop",
+        "logo": "images/taunus-pharmacy-logo.svg",
+        "membershipLevel": 1,
+        "category": "Healthcare",
+        "yearFounded": 1992,
+        "employees": 12
+    },
+    {
+        "name": "Huguenot Restaurant & Catering",
+        "address": "Friedrichstraße 56, 61381 Friedrichsdorf",
+        "phone": "+49 6172 567890",
+        "website": "https://www.hugenotten-restaurant.de",
+        "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+        "logo": "images/huguenot-restaurant-logo.svg",
+        "membershipLevel": 3,
+        "category": "Food & Beverage",
+        "yearFounded": 2005,
+        "employees": 35
+    },
+    {
+        "name": "Weber Landscaping & Garden Design",
+        "address": "Am Köpperner Tal 15, 61381 Friedrichsdorf",
+        "phone": "+49 6172 678901",
+        "website": "https://www.gartenbau-weber.de",
+        "imageUrl": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=400&h=300&fit=crop",
+        "logo": "images/weber-landscaping-logo.svg",
+        "membershipLevel": 1,
+        "category": "Landscaping",
+        "yearFounded": 2001,
+        "employees": 18
+    },
+    {
+        "name": "Taunus Fit Gym",
+        "address": "Seulberger Straße 34, 61381 Friedrichsdorf",
+        "phone": "+49 6172 789012",
+        "website": "https://www.taunus-fit.de",
+        "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop",
+        "logo": "images/taunus-fit-logo.svg",
+        "membershipLevel": 2,
+        "category": "Health & Fitness",
+        "yearFounded": 2012,
+        "employees": 22
+    }
+]
