@@ -40,7 +40,7 @@ const displayCompanies = (companies) => {
         image.alt = `Image of ${company.name}`;
         image.loading = 'lazy';
         image.setAttribute('width', 200);
-        image.setAttribute('height', "auto");
+        image.setAttribute('height', 150);
         card.appendChild(image);
 
         let compName = document.createElement('h2');
