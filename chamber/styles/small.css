@@ -30,37 +30,22 @@ header span {
     color: var(--color3);
 }
 
-#ham-btn::after {
-    content: "☰";
-}
-
-#ham-btn.show::after {
-    content: "×";
-}
-
-/******************************* MAIN *******************************/
-#dir-title {
-    display: grid;
-    grid-template-columns: auto 44px;
-    column-gap: 8px;
-    align-items: center;
-}
-
-#toggle-view-btn,
-#ham-btn {
+.hamburger {
     background: none;
     border: none;
     color: var(--color3);
+    width: 44px;
+    height: 44px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
 }
 
-#toggle-view-btn.view-list:after {
-    content: "⊞";
+.hamburger::after {
+    content: "☰";
+    font-size: 2rem;
 }
 
-#toggle-view-btn.view-table:after {
-    content: "▤";
+.hamburger.show::after {
+    content: "×";
 }
 
 /**************************** NAVIGATION ****************************/
@@ -94,79 +79,14 @@ header span {
     background-color: var(--ItemHover);
 }
 
-/***************************** MAIN *************************************/
-h1 {
-    color: var(--color4);
-}
-
-/*************************** COMPANIES **********************************/
-#companies:has(section.view-table) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
-}
-
-#companies:has(section.view-list) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-}
-
-section.view-table {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid var(--ItemHover);
-    background-color: var(--ItemSelect);
-}
-
-section.view-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-    align-items: center;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-section.view-list:nth-child(odd) {
-    background-color: var(--ItemSelect);
-}
-
-section.view-list:nth-child(even) {
-    background-color: var(--ItemHover);
-}
-
-section.view-list img {
-    display: none;
-}
-
-section.view-list h2 {
-    margin: 0.25rem 0;
-}
-
-#companies p,
-h2,
-a {
-    text-align: center;
-}
-
-#companies p {
-    margin: 0;
-}
-
 /**************************** FOOTER ****************************/
-main {
-    margin-bottom: 0.5rem;
-}
-
 footer {
     display: grid;
-    grid-template-columns: auto auto auto;
-    ;
+    grid-template-rows: auto auto auto;
     align-items: center;
+    gap: 0.5rem;
     background-color: var(--Item);
+    margin-top: 0.5rem;
     padding: 1rem 0px;
     text-align: center;
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/houses-logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="images/houses-logo.png" type="image/x-icon">
+    <title>WDD 231 - Web Frontend Development I - Jörg Beyersdorfer</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="WDD 231 - Chamber Landing page. This is a fictional directory created for educational purposes.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/">
+    <meta property="og:title" content="WDD 231 - Web Frontend Development I - Jörg Beyersdorfer">
+    <meta property="og:description"
+        content="WDD 231 portfolio by Thomas Jörg Beyersdorfer featuring web development projects, course work, and skills in HTML, CSS, JavaScript, and responsive design.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/images/student.jpg">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 38rem)">
+    <link rel="stylesheet" href="styles/home-small.css">
+    <link rel="stylesheet" href="styles/home-large.css" media="(min-width: 38rem)">
+</head>
+
+<body>
+    <header>
+        <img src="images/houses-logo.svg" alt="Site Logo" width="24" height="24">
+        <span>Thomas's Site Title</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="directory.html">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section id="Events">
+            <h2>Events</h2>
+        </section>
+        <section>
+            <h2>Current Weather</h2>
+            <div id="weather-current">
+                <img src="" alt="Weather icon" id="weather-icon">
+                <div id="weather-info">
+                    <p><span class="weather-label"></span> <span id="weather-temp"></span></p>
+                    <p><span class="weather-label"></span> <span id="weather-clouds"></span></p>
+                    <p><span class="weather-label">High:</span> <span id="weather-high"></span></p>
+                    <p><span class="weather-label">Low:</span> <span id="weather-low"></span></p>
+                    <p><span class="weather-label">Humidity:</span> <span id="weather-humidity"></span></p>
+                    <p><span class="weather-label">Sunrise:</span> <span id="weather-sunrise"></span></p>
+                    <p><span class="weather-label">Sunset:</span> <span id="weather-sunset"></span></p>
+                </div>
+            </div>
+        </section>
+        <section id="weather-forecast">
+            <h2>Weather Forecast</h2>
+            <p>Weather Forecast Content</p>
+        </section>
+        <section id="company-selection">
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2>Friedrichsdorf<BR>Chamber of Comerce</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@friedrichsdorf-chamber.de</p>
+            <p>+49 6172 999-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Friedrichsdorf Chamber of Comerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+:root {
+    --color1: #b4a497;
+    --color2: #f5b1c3;
+    --color3: #315b7c;
+    /* original: #75b1e7 */
+    --color4: #484846;
+    --Item: #eee;
+    --ItemSelect: #ddd;
+    --ItemHover: #ccc;
+}
+
+/******************************* MAIN *******************************/
+#dir-title {
+    display: grid;
+    grid-template-columns: auto 44px;
+    column-gap: 8px;
+    align-items: center;
+}
+
+#toggle-view-btn,
+#ham-btn {
+    background: none;
+    border: none;
+    color: var(--color3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+#toggle-view-btn.view-list:after {
+    content: "⊞";
+}
+
+#toggle-view-btn.view-table:after {
+    content: "▤";
+}
+
+h1 {
+    color: var(--color4);
+}
+
+/*************************** COMPANIES **********************************/
+#companies:has(section.view-table) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+}
+
+#companies:has(section.view-list) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+section.view-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--ItemHover);
+    background-color: var(--ItemSelect);
+}
+
+section.view-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    align-items: center;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+section.view-list:nth-child(odd) {
+    background-color: var(--ItemSelect);
+}
+
+section.view-list:nth-child(even) {
+    background-color: var(--ItemHover);
+}
+
+section.view-list img {
+    display: none;
+}
+
+section.view-list h2 {
+    margin: 0.25rem 0;
+}
+
+#companies p,
+h2,
+a {
+    text-align: center;
+}
+
+#companies p {
+    margin: 0;
+}
