@@ -1,5 +1,6 @@
-/* Responsive Design für größere Bildschirme */
-#companies:has(section.view-table) {
+@media only screen and (min-width: 38rem) {
+
+    #companies:has(section.view-table) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -12,4 +13,6 @@ section.view-list {
     gap: 0;
     padding: 0.5rem 1rem;
     border-bottom: none;
+}
+
 }
