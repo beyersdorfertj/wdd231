@@ -129,6 +129,8 @@ async function initWeather() {
     const weatherIcon = document.querySelector('#weather-icon');
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
+    weatherIcon.setAttribute('width', 50);
+    weatherIcon.setAttribute('height', 50);
 
     document.querySelector('#weather-temp').textContent = `${Math.round(data.main.temp)}°C`;
     const description = data.weather[0].description;
