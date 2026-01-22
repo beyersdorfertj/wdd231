@@ -42,6 +42,8 @@ async function initMembers() {
         companyImage.className = 'company-logo';
         companyImage.setAttribute('src', member.logo);
         companyImage.setAttribute('alt', `${member.name} logo`);
+        companyImage.setAttribute('width', 200);
+        companyImage.setAttribute('height', 200);
         companyImage.setAttribute('loading', 'lazy');
         companyBody.appendChild(companyImage);
 
