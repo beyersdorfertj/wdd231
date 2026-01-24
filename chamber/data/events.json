@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Chamber Business Networking Breakfast",
+      "date": "2026-01-05",
+      "time": "08:00",
+      "location": "Grand Hotel Conference Room",
+      "description": "Join fellow business leaders for a morning of networking and collaboration. Continental breakfast will be served.",
+      "category": "Networking"
+    },
+    {
+      "id": 2,
+      "name": "Small Business Tax Workshop",
+      "date": "2026-02-12",
+      "time": "14:00",
+      "location": "Chamber Headquarters",
+      "description": "Learn essential tax strategies for small businesses. Expert accountants will cover deductions, credits, and filing tips.",
+      "category": "Education"
+    },
+    {
+      "id": 3,
+      "name": "Community Job Fair",
+      "date": "2026-02-18",
+      "time": "10:00",
+      "location": "City Convention Center",
+      "description": "Connect with top local employers. Bring your resume and be prepared to interview on the spot.",
+      "category": "Career"
+    },
+    {
+      "id": 4,
+      "name": "Digital Marketing Masterclass",
+      "date": "2026-02-25",
+      "time": "18:30",
+      "location": "Innovation Hub",
+      "description": "Discover the latest digital marketing trends and strategies. Learn how to leverage social media, SEO, and content marketing.",
+      "category": "Education"
+    },
+    {
+      "id": 5,
+      "name": "Annual Chamber Gala",
+      "date": "2026-03-08",
+      "time": "19:00",
+      "location": "Riverside Ballroom",
+      "description": "Our premier annual event celebrating local business achievements. Black tie optional. Dinner and awards ceremony.",
+      "category": "Special Event"
+    },
+    {
+      "id": 6,
+      "name": "Leadership Development Seminar",
+      "date": "2026-03-15",
+      "time": "09:00",
+      "location": "Chamber Headquarters",
+      "description": "Enhance your leadership skills with interactive workshops and expert speakers. Perfect for emerging leaders.",
+      "category": "Education"
+    },
+    {
+      "id": 7,
+      "name": "Spring Business Expo",
+      "date": "2026-03-22",
+      "time": "10:00",
+      "location": "Downtown Expo Center",
+      "description": "Showcase your business to the community. Booth space available. Network with hundreds of attendees.",
+      "category": "Exhibition"
+    },
+    {
+      "id": 8,
+      "name": "Women in Business Luncheon",
+      "date": "2026-04-02",
+      "time": "12:00",
+      "location": "The Garden Restaurant",
+      "description": "Celebrating women entrepreneurs and business leaders. Inspiring keynote speaker and networking opportunities.",
+      "category": "Networking"
+    },
+    {
+      "id": 9,
+      "name": "Sustainability in Business Forum",
+      "date": "2026-04-10",
+      "time": "15:00",
+      "location": "Green Tech Center",
+      "description": "Explore sustainable business practices and environmental responsibility. Panel discussion with industry leaders.",
+      "category": "Forum"
+    },
+    {
+      "id": 10,
+      "name": "Young Professionals Mixer",
+      "date": "2026-04-17",
+      "time": "17:30",
+      "location": "Skyline Rooftop Bar",
+      "description": "Casual networking event for professionals under 40. Drinks and appetizers included. Build your professional network.",
+      "category": "Networking"
+    }
+  ]
+}

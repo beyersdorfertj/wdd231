@@ -183,6 +183,68 @@ async function initForecast() {
     });
 }
 
+async function getEventsData() {
+    const response = await fetch('data/events.json');
+    return await response.json();
+}
+
+function getNextTwoEvents(events) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const upcomingEvents = events.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= today;
+    });
+    
+    upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    return upcomingEvents.slice(0, 2);
+}
+
+async function initEvents() {
+    const data = await getEventsData();
+    const nextEvents = getNextTwoEvents(data.events);
+    
+    const eventsSection = document.querySelector('#Events');
+    eventsSection.innerHTML = '<h2>Events</h2>';
+    
+    nextEvents.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'event-card';
+        
+        const eventDate = new Date(event.date);
+        const formattedDate = eventDate.toLocaleDateString('en-US', { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+        
+        const eventTitle = document.createElement('h3');
+        eventTitle.textContent = event.name;
+        eventCard.appendChild(eventTitle);
+        
+        const eventDateTime = document.createElement('p');
+        eventDateTime.className = 'event-datetime';
+        eventDateTime.innerHTML = `<strong>${formattedDate}</strong> um ${event.time} Uhr`;
+        eventCard.appendChild(eventDateTime);
+        
+        const eventLocation = document.createElement('p');
+        eventLocation.className = 'event-location';
+        eventLocation.innerHTML = `📍 ${event.location}`;
+        eventCard.appendChild(eventLocation);
+        
+        const eventDescription = document.createElement('p');
+        eventDescription.className = 'event-description';
+        eventDescription.textContent = event.description;
+        eventCard.appendChild(eventDescription);
+        
+        eventsSection.appendChild(eventCard);
+    });
+}
+
 initMembers();
 initWeather();
 initForecast();
+initEvents();
