@@ -102,18 +102,25 @@ filterCseBtn.addEventListener('click', () => {
 
 function filterCourses(subject) {
     const courseList = document.querySelector('#course-list');
-    
+
     let filteredCourses;
     if (subject === 'all') {
         filteredCourses = courses;
     } else {
         filteredCourses = courses.filter(course => course.subject === subject);
     }
-    
-    courseList.innerHTML = filteredCourses.map(course => 
-        `<li class="${course.completed ? 'completed' : ''}"><p>${course.subject} ${course.number}</p></li>`
-    ).join('');
-    
+
+    courseList.innerHTML = '';
+    filteredCourses.forEach((course) => {
+        const li = document.createElement('li');
+        if (course.completed) li.className = 'completed';
+        li.innerHTML = `<p>${course.subject} ${course.number}</p>`;
+        li.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+        courseList.appendChild(li);
+    });
+
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     document.querySelector('#total-credits').textContent = `The total credits for courses listed above is ${totalCredits}`;
 }
@@ -122,3 +129,33 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAllBtn.classList.add('current');
     filterCourses('all');
 });
+
+const modal = document.querySelector('#myModal');
+const closeModal = document.querySelector('#closeModal');
+
+//modal.showModal(); // display the modal dialog right away.
+// Usually you will want to wait for a user action to show the modal dialog
+closeModal.addEventListener('click', () => {
+    modal.close();
+});
+
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+    courseDetails.showModal();
+
+    const closeModalBtn = courseDetails.querySelector("#closeModal");
+    closeModalBtn.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
