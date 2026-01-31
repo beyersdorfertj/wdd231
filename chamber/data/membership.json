@@ -1,0 +1,55 @@
+{
+    "np": {
+        "title": "NP Membership",
+        "description": "For Non-Profit Organizations",
+        "price": "No Fee",
+        "benefits": [
+            "Chamber directory listing",
+            "Access to networking events",
+            "Monthly newsletter",
+            "Community event participation"
+        ]
+    },
+    "bronze": {
+        "title": "Bronze Membership",
+        "description": "Basic Benefits Package",
+        "price": "€500/year",
+        "benefits": [
+            "All NP Membership benefits",
+            "Business workshops and training sessions",
+            "10% discount on chamber events",
+            "Social media mentions (quarterly)",
+            "Ribbon cutting ceremony for new business"
+        ]
+    },
+    "silver": {
+        "title": "Silver Membership",
+        "description": "Enhanced Benefits",
+        "price": "€1,500/year",
+        "benefits": [
+            "All Bronze Membership benefits",
+            "20% discount on all chamber events",
+            "Priority registration for exclusive events",
+            "Social media mentions (monthly)",
+            "Featured business spotlight (1 per year)",
+            "Free booth at annual chamber expo",
+            "Access to member-only webinars"
+        ]
+    },
+    "gold": {
+        "title": "Gold Membership",
+        "description": "Premium Benefits Package",
+        "price": "€3,000/year",
+        "benefits": [
+            "All Silver Membership benefits",
+            "50% discount on all chamber events",
+            "Featured spotlight on home page (quarterly)",
+            "Social media mentions (weekly)",
+            "Premium booth placement at chamber expo",
+            "Speaking opportunities at chamber events",
+            "One-on-one business consulting sessions",
+            "Exclusive VIP networking events",
+            "Logo on chamber website and promotional materials"
+        ]
+    }
+}

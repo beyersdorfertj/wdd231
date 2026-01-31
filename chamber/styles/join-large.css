@@ -1,0 +1,17 @@
+/* Join Page - Large Screens */
+
+.join-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+form {
+    grid-column: 1;
+}
+
+.membership-cards {
+    grid-column: 2;
+    grid-template-columns: 1fr;
+}

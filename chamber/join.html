@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml" sizes="any">
+    <link rel="alternate icon" href="../images/houses-logo.png" type="image/png" sizes="32x32">
+    <title>WDD 231 - Join Chamber - Jörg Beyersdorfer</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/chamber/">
+    <meta property="og:title" content="WDD 231 - Chamber Directory - Jörg Beyersdorfer">
+    <meta property="og:description"
+        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/chamber/images/chamber-preview.svg">
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 38rem)">
+    <link rel="stylesheet" href="styles/join-small.css">
+    <link rel="stylesheet" href="styles/join-large.css" media="(min-width: 38rem)">
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/houses-logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Thomas's Site Title</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Join the Chamber</h1>
+        <div class="join-container">
+            <form action="thankyou.html" method="get">
+                <h2>Applicant Information Form</h2>
+                <fieldset>
+                    <label for="first-name"><span>First Name</span>
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+                    <label for="last-name"><span>Last Name</span>
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+                    <label for="title"><span>Title</span>
+                        <input type="text" id="title" name="title"
+                            title="Enter your title or position (minimum 7 characters, letters only)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+                    <label for="email"><span>Email</span>
+                        <input type="email" id="email" name="email" title="Enter a valid email address"
+                            autocomplete="email" required placeholder="example@email.com">
+                    </label>
+                    <label for="phone"><span>Cell Phone</span>
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <label for="organization"><span>Business/Organization Name</span>
+                        <input type="text" id="organization" name="organization"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+                    <label for="membership"><span>Membership Level</span>
+                        <select id="membership" name="membership" title="Select your desired membership level">
+                            <option value="">Select a level</option>
+                            <option value="np">NP Membership (No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    <label for="description"><span>Business Description</span>
+                        <textarea id="description" name="description" rows="4"
+                            title="Describe your business or organization" required></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" id="submit-btn" value="Request Chamber Membership" disabled>
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Level</h2>
+                <div id="cards-container"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h2>Friedrichsdorf<br>Chamber of Comerce</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@friedrichsdorf-chamber.de</p>
+            <p>+49 6172 999-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Friedrichsdorf Chamber of Comerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <!-- Membership Level Modal -->
+    <dialog id="membership-modal" class="membership-modal">
+        <button class="close-modal" aria-label="Close modal">✕</button>
+        <h3 id="modal-title"></h3>
+        <p class="modal-price" id="modal-price"></p>
+        <h4>Benefits Include:</h4>
+        <ul id="modal-benefits"></ul>
+    </dialog>
 </body>
+
 </html>

@@ -1,0 +1,47 @@
+/* Thank You Page - Large Screens */
+
+@media (min-width: 38rem) {
+    main {
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+    .success-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+        line-height: 100px;
+        margin: 1.5rem auto 2rem;
+    }
+
+    .main-message {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .application-summary,
+    .next-steps,
+    .contact-info {
+        padding: 2rem;
+    }
+
+    .details-list {
+        grid-template-columns: 200px 1fr;
+        gap: 1rem 2rem;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 1rem 2rem;
+        min-width: 200px;
+    }
+}

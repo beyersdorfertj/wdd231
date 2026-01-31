@@ -1,0 +1,305 @@
+/* Join Page - Small Screens */
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color3);
+}
+
+form h2,
+.membership-cards h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color3);
+}
+
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--color4);
+}
+
+label span {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+label:has(input[required]) span::after,
+label:has(select[required]) span::after,
+label:has(textarea[required]) span::after {
+    content: " *";
+    color: var(--color2);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid var(--ItemHover);
+    border-left: 4px solid var(--ItemHover);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:required,
+input[type="email"]:required,
+input[type="tel"]:required,
+select:required,
+textarea:required {
+    border-left-color: var(--color2);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color3);
+    border-left-color: var(--color3);
+    box-shadow: 0 0 0 3px rgba(49, 91, 124, 0.2);
+}
+
+input[type="text"]:required:focus,
+input[type="email"]:required:focus,
+input[type="tel"]:required:focus,
+select:required:focus,
+textarea:required:focus {
+    border-left-color: var(--color2);
+}
+
+input[type="text"]:required:valid,
+input[type="email"]:required:valid,
+input[type="tel"]:required:valid,
+select:required:valid,
+textarea:required:valid {
+    border-left-color: #4caf50;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+input[type="submit"]:hover:not(:disabled) {
+    background-color: var(--color4);
+}
+
+input[type="submit"]:focus:not(:disabled) {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 91, 124, 0.4);
+}
+
+input[type="submit"]:disabled {
+    background-color: var(--color4);
+    color: var(--Item);
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* Membership Cards */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.membership-card {
+    background-color: var(--Item);
+    border: 1px solid var(--ItemSelect);
+    border-radius: 5px 16px 5px 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    animation: fadeInUpBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+@keyframes fadeInUpBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.membership-card.selected {
+    background-color: #e8f5e9;
+    border-color: var(--color3);
+    box-shadow: 0 2px 8px rgba(49, 91, 124, 0.3);
+}
+
+.membership-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color3);
+}
+
+.membership-card p {
+    margin: 0 0 1rem 0;
+    color: var(--color4);
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color3);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.learn-more:hover {
+    background-color: var(--color4);
+}
+
+.learn-more:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 91, 124, 0.4);
+}
+
+/* Membership Modals */
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color4);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--color4);
+    background-color: var(--Item);
+}
+
+.close-modal:focus {
+    outline: none;
+    color: var(--color4);
+    background-color: var(--ItemSelect);
+    box-shadow: 0 0 0 3px rgba(49, 91, 124, 0.3);
+}
+
+.membership-modal h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color3);
+    font-size: 1.5rem;
+}
+
+.modal-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color3);
+    margin: 0 0 1.5rem 0;
+}
+
+.membership-modal h4 {
+    margin: 1rem 0 0.5rem 0;
+    color: var(--color4);
+}
+
+.membership-modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-modal li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--ItemSelect);
+}
+
+.membership-modal li:last-child {
+    border-bottom: none;
+}
+
+.membership-modal li::before {
+    content: "✓ ";
+    color: var(--color3);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
