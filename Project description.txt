@@ -1,0 +1,38 @@
+1. Subject of the Website
+The subject of the website is a Sailing Club Web Platform that introduces the club, allows users to register for upcoming sailing tours, presents past tours, and provides detailed descriptions of the boats used by the club.
+
+2. Brief Description of the Content of the Website
+The website will consist of the following main components:
+- Landing Page:
+Introduction to the sailing club
+Attractive images, navigation, and key highlights
+
+- Upcoming Tours – Registration Page:
+List of planned sailing trips
+Detailed information per tour
+User registration for participation as crew
+
+- Past Tours Page:
+Overview of previous sailing trips
+Photos, descriptions, and reports
+
+- Boat Description Page
+Presentation of all boats in the club
+For each boat:
+Name
+Type (e.g., sloop, ketch, catamaran)
+Size and technical data
+Photos
+Equipment overview
+
+3. Reason and/or Purpose for the Project Subject
+The project aims to demonstrate all techniques learned in the web development course in a realistic application.
+A sailing club website is ideal for this purpose because the structure naturally allows the student to showcase many essential elements:
+- HTML fundamentals: headings, lists, navigation, sections
+- Forms: user registration for tours
+- Styling with CSS: layout, color schemes, hover effects, transitions
+- Media integration: images of boats and tours
+- Semantic structure: separate pages with meaningful content
+- Responsive design: layout adjustments for different screen sizes
+- Optional enhancements: animations, modals, or image galleries
+- Dynamic Data Handling: external data files to store data

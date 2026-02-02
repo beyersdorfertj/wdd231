@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml" sizes="any">
+    <link rel="alternate icon" href="../images/houses-logo.png" type="image/png" sizes="32x32">
+    <title>Sailing Club Friedrichsdorf - Project Planning</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="WDD231 Final Project Planning - Sailing Club Friedrichsdorf website planning document including site purpose, scenarios, color scheme, typography, and wireframes.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/project/">
+    <meta property="og:title" content="Sailing Club Friedrichsdorf - Project Planning">
+    <meta property="og:description"
+        content="WDD231 Final Project Planning - Sailing Club Friedrichsdorf website planning document.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/project/images/sailing-preview.jpg">
+    <script src="../scripts/footer.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/project-planning.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/sailing-logo.svg" alt="Sailing Club Friedrichsdorf Logo" width="24" height="24" fetchpriority="high">
+        <span>Sailing Club Friedrichsdorf</span>
+        <h1>Sailing Club Friedrichsdorf</h1>
+        <p class="subtitle">WDD231 Final Project Planning Document</p>
+    </header>
+    <main>
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <h3>Sailing Club Friedrichsdorf</h3>
+            <p><strong>Reason:</strong> This name represents a sailing club based in Friedrichsdorf, Germany, focused on organizing sailing tours, maintaining a fleet of boats, and building a community of sailing enthusiasts. The name clearly communicates the club's purpose (sailing) and its local identity (Friedrichsdorf).</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The Sailing Club Friedrichsdorf website serves as a comprehensive platform for club members and prospective sailors. The site provides:</p>
+            <ul>
+                <li><strong>Tour Registration:</strong> Members can browse upcoming sailing tours and register to participate as crew</li>
+                <li><strong>Fleet Information:</strong> Detailed descriptions of all club boats including technical specifications, equipment, and photos</li>
+                <li><strong>Tour Archive:</strong> Historical records of past sailing adventures with photos, reports, and member experiences</li>
+                <li><strong>Membership Information:</strong> Details about joining the club and member benefits</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <div class="scenario">
+                <h3>Scenario 1</h3>
+                <p><strong>Question:</strong> "I'm interested in joining an upcoming Mediterranean sailing tour. How can I see what tours are available and register for one?"</p>
+                <p><strong>Answer:</strong> The website will feature an "Upcoming Tours" page with a comprehensive list of planned sailing trips. Each tour will display dates, destinations, required experience level, available crew positions, and a registration form.</p>
+            </div>
+            <div class="scenario">
+                <h3>Scenario 2</h3>
+                <p><strong>Question:</strong> "What type of boats does the club have, and what are their technical specifications? I'm particularly interested in catamarans."</p>
+                <p><strong>Answer:</strong> The "Our Boats" page will showcase the entire fleet with filterable categories (sloop, ketch, catamaran). Each boat profile includes name, type, size, technical data, equipment overview, and a photo gallery.</p>
+            </div>
+        </section>
+
+        <section id="color-scheme">
+            <h2>Color Scheme</h2>
+            <p><strong>Rationale:</strong> The selected color palette is inspired by the natural elements of sailing - the deep blue of the ocean (primary color), warm sandy beaches (secondary color), and vibrant sunsets over the water (accent color). These colors create a maritime atmosphere while maintaining professional readability and accessibility. The ocean blue establishes trust and stability, the beige provides warmth and approachability, and the orange adds energy and excitement that reflects the adventure of sailing.</p>
+            <div class="color-palette">
+                <div class="color-card">
+                    <div class="color-sample primary-color"></div>
+                    <h3>Primary: Ocean Blue (#1e5a7d)</h3>
+                    <p><strong>Usage:</strong> Main headings, navigation bar, call-to-action buttons, primary brand elements</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample secondary-color"></div>
+                    <h3>Secondary: Warm Sand (#e0c9a6)</h3>
+                    <p><strong>Usage:</strong> Section backgrounds, card backgrounds, subtle accents, borders</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample accent-color"></div>
+                    <h3>Accent: Sunset Orange (#e07a3f)</h3>
+                    <p><strong>Usage:</strong> Hover states, important highlights, call-to-action elements, active states</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample text-color"></div>
+                    <h3>Text: Dark Gray (#2c3e50)</h3>
+                    <p><strong>Usage:</strong> Body text, paragraphs, descriptions</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <div class="font-example">
+                <h3 class="heading-font">Merriweather (Headings)</h3>
+                <p><strong>Usage:</strong> All headings (h1, h2, h3), section titles, navigation menu items</p>
+                <p><strong>Characteristics:</strong> Serif font that provides a classic, maritime feel with excellent readability</p>
+            </div>
+            <div class="font-example">
+                <h3 class="heading-font">Open Sans (Body)</h3>
+                <p><strong>Usage:</strong> Body text, paragraphs, descriptions, form labels, buttons</p>
+                <p><strong>Characteristics:</strong> Clean, modern sans-serif that ensures excellent legibility across all devices</p>
+            </div>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <div class="wireframe-container">
+                <div class="wireframe-section">
+                    <h3>Mobile View (< 640px)</h3>
+                    <div class="wireframe mobile-wireframe">
+                        <div class="wire-header">Header + Logo</div>
+                        <div class="wire-nav">Navigation (Hamburger)</div>
+                        <div class="wire-hero">Hero Section<br>Image + Text</div>
+                        <div class="wire-content">Tours Section<br>(Stacked Cards)</div>
+                        <div class="wire-content">Boats Section<br>(Stacked Cards)</div>
+                        <div class="wire-content">CTA Section</div>
+                        <div class="wire-footer">Footer</div>
+                    </div>
+                </div>
+                <div class="wireframe-section">
+                    <h3>Desktop View (> 640px)</h3>
+                    <div class="wireframe desktop-wireframe">
+                        <div class="wire-header">Header + Logo + Navigation</div>
+                        <div class="wire-hero">Hero Section - Full Width Image + Centered Text</div>
+                        <div class="wire-grid">
+                            <div class="wire-card">Tour Card 1</div>
+                            <div class="wire-card">Tour Card 2</div>
+                            <div class="wire-card">Tour Card 3</div>
+                        </div>
+                        <div class="wire-grid">
+                            <div class="wire-card">Boat 1</div>
+                            <div class="wire-card">Boat 2</div>
+                            <div class="wire-card">Boat 3</div>
+                        </div>
+                        <div class="wire-content">Call to Action - Centered</div>
+                        <div class="wire-footer">Footer - Three Columns</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2>Sailing Club<br>Friedrichsdorf</h2>
+            <p>Am Segelhafen 15</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@sc-friedrichsdorf.de</p>
+            <p>+49 6172 999-777</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Final Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Sailing Club Friedrichsdorf</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
