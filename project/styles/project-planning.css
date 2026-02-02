@@ -288,7 +288,7 @@ footer h2 {
 }
 
 /* Tablet and Desktop */
-@media (min-width: 640px) {
+@media (min-width: 38rem) {
     footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -324,7 +324,7 @@ footer h2 {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .color-palette {
         grid-template-columns: repeat(4, 1fr);
     }
