@@ -11,58 +11,63 @@
         rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml" sizes="any">
-    <link rel="alternate icon" href="../images/houses-logo.png" type="image/png" sizes="32x32">
-    <title>WDD 231 - Chamber Directory - Jörg Beyersdorfer</title>
+    <link rel="icon" href="images/houses-logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="images/houses-logo.png" type="image/x-icon">
+    <title>Discovery - Friedrichsdorf Chamber of Commerce</title>
     <meta name="author" content="Thomas Jörg Beyersdorfer">
     <meta name="description"
-        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
+        content="Discover Friedrichsdorf Chamber of Commerce - Learn about our community and local businesses.">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/chamber/">
-    <meta property="og:title" content="WDD 231 - Chamber Directory - Jörg Beyersdorfer">
+    <meta property="og:url" content="https://beyersdorfertj.github.io/wdd231/chamber/discovery.html">
+    <meta property="og:title" content="Discovery - Friedrichsdorf Chamber of Commerce">
     <meta property="og:description"
-        content="WDD 231 - Chamber Directory. This is a fictional directory created for educational purposes.">
-    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/chamber/images/chamber-preview.svg">
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
-    <script src="../scripts/footer.js" defer></script>
+        content="Discover Friedrichsdorf Chamber of Commerce - Learn about our community and local businesses.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/images/student.jpg">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 38rem)">
-    <link rel="stylesheet" href="styles/directory-small.css">
-    <link rel="stylesheet" href="styles/directory-large.css" media="(min-width: 38rem)">
 </head>
 
 <body>
     <header>
-        <img src="../images/houses-logo.svg" alt="Site Logo" width="24" height="24">
-        <span>Friedrichsdorf Chamber of Commerce</span>
-        <button id="ham-btn" title="Navigation" class="hamburger" aria-label="Toggle navigation menu"></button>
+        <img src="images/houses-logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Thomas's Site Title</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="#">Directory</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discovery.html">Discover</a></li>
+            <li class="current"><a href="#">Discover</a></li>
         </ul>
     </nav>
     <main>
-        <div id="dir-title">
-            <h1>Chamber Members</h1>
-            <button id="toggle-view-btn" title="Toggle View" class="view-list" aria-label="Toggle menber view"></button>
-        </div>
-        <div id="companies"></div>
+        <h1>Discovery</h1>
+        <section>
+            <h2>Explore Our Community</h2>
+            <p>Welcome to the Discovery page of the Friedrichsdorf Chamber of Commerce. Here you can learn more about our vibrant community and the businesses that make it thrive.</p>
+        </section>
+        <section>
+            <h2>Local Attractions</h2>
+            <p>Discover what makes Friedrichsdorf special.</p>
+        </section>
+        <section>
+            <h2>Demographics</h2>
+            <p>Learn about our community's demographics and statistics.</p>
+        </section>
     </main>
     <footer>
-        <section>
+        <div>
             <h2>Friedrichsdorf<br>Chamber of Comerce</h2>
             <p>Hugenottenstraße 55</p>
             <p>61381 Friedrichsdorf</p>
             <p>info@friedrichsdorf-chamber.de</p>
             <p>+49 6172 999-0</p>
-        </section>
+        </div>
         <div class="social">
             <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
                     alt="GitHub of Author" width="44" height="44"></a>
