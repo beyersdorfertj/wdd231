@@ -80,11 +80,11 @@ h1 {
     padding: 2rem;
     max-width: 800px;
     width: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 #discovery-modal::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--backdrop);
 }
 
 #discovery-modal .close-btn {
