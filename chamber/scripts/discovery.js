@@ -43,7 +43,7 @@ function createCard(item) {
     img.alt = item.name;
     img.width = 300;
     img.height = 200;
-    img.loading = 'lazy';
+//    img.loading = 'lazy';
     
     const title = document.createElement('h2');
     title.textContent = item.name;
