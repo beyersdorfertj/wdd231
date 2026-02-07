@@ -1,0 +1,29 @@
+@media only screen and (max-width: 640px) {
+
+    #discovery-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .discovery-cards div {
+        grid-template-areas:
+            "name"
+            "photograph"
+            "description"
+            "location";
+    }
+
+    .discovery-card {
+        padding: 1rem;
+    }
+
+    .discovery-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .discovery-card address {
+        font-size: 0.9rem;
+    }
+
+}

@@ -26,9 +26,15 @@
     <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/images/student.jpg">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/footer.js" defer></script>
+    <script src="scripts/discovery.js" type="module" defer></script>
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/discovery.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 38rem)">
+    <link rel="stylesheet" href="styles/discovery-small.css" media="(max-width: 640px)">
+    <link rel="stylesheet" href="styles/discovery-medium.css" media="(min-width: 641px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="styles/discovery-large.css" media="(min-width: 1025px)">
+</head>
 </head>
 
 <body>
@@ -47,18 +53,8 @@
     </nav>
     <main>
         <h1>Discovery</h1>
-        <section>
-            <h2>Explore Our Community</h2>
-            <p>Welcome to the Discovery page of the Friedrichsdorf Chamber of Commerce. Here you can learn more about our vibrant community and the businesses that make it thrive.</p>
-        </section>
-        <section>
-            <h2>Local Attractions</h2>
-            <p>Discover what makes Friedrichsdorf special.</p>
-        </section>
-        <section>
-            <h2>Demographics</h2>
-            <p>Learn about our community's demographics and statistics.</p>
-        </section>
+        <p id="visit-message"></p>
+        <div id="discovery-cards"></div>
     </main>
     <footer>
         <div>

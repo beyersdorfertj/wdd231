@@ -1,0 +1,144 @@
+:root {
+    --color1: #b4a497;
+    --color2: #f5b1c3;
+    --color3: #315b7c;
+    --color4: #484846;
+    --Item: #eee;
+    --ItemSelect: #ddd;
+    --ItemHover: #ccc;
+}
+
+/******************************* MAIN *******************************/
+h1 {
+    color: var(--color4);
+}
+
+#visit-message {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    background-color: var(--ItemSelect);
+    border-left: 4px solid var(--color3);
+    font-size: 1.1rem;
+    color: var(--color4);
+}
+
+/*************************** DISCOVERY CARDS (Base styles for all widths) **********************************/
+.discovery-card {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--ItemHover);
+    background-color: var(--ItemSelect);
+    grid-template-areas:
+    "name"
+    "photograph"
+    "description"
+    "location"
+    "button";
+}
+
+.discovery-card h2 {
+    grid-area: name;
+    margin: 0.5rem 0;
+    text-align: center;
+    color: var(--color4);
+}
+
+.discovery-card img {
+    grid-area: photograph;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.discovery-card address {
+    grid-area: location;
+    font-style: normal;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: var(--color3);
+}
+
+.discovery-card p {
+    grid-area: description;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.discovery-card button {
+    grid-area: button;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.discovery-card button:hover {
+    background-color: var(--color4);
+}
+
+/*************************** MODAL **********************************/
+#discovery-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#discovery-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#discovery-modal .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color4);
+    padding: 0;
+    line-height: 1;
+}
+
+#discovery-modal .close-btn:hover {
+    color: var(--color3);
+}
+
+#discovery-modal h2 {
+    margin: 0 0 1rem 0;
+    color: var(--color4);
+}
+
+#discovery-modal figure {
+    margin: 1rem 0;
+}
+
+#discovery-modal figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#discovery-modal address {
+    font-style: normal;
+    color: var(--color3);
+    margin: 1rem 0;
+}
+
+#discovery-modal .full-description {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+#discovery-modal .contact {
+    margin-top: 1rem;
+    color: var(--color4);
+}
