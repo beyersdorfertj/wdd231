@@ -41,6 +41,8 @@ function createCard(item) {
     const img = document.createElement('img');
     img.src = item.image1;
     img.alt = item.name;
+    img.width = 300;
+    img.height = 200;
     img.loading = 'lazy';
     
     const title = document.createElement('h2');
