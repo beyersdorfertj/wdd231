@@ -14,7 +14,7 @@ function showModal(item) {
         <button class="close-btn" aria-label="Close">&times;</button>
         <h2>${item.name}</h2>
         <figure>
-            <img src="${item.image2}" alt="${item.name}" loading="lazy">
+            <img src="${item.image2}" alt="${item.name}" width="600" height="400">
         </figure>
         <address>${item.address}</address>
         <p class="full-description">${item.fullDescription}</p>
