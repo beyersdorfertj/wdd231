@@ -8,7 +8,15 @@
     <title>Tour Archive - Sailing Club Friedrichsdorf</title>
     <meta name="author" content="Thomas Jörg Beyersdorfer">
     <meta name="description" content="Browse past Sailing Club Friedrichsdorf tours">
+    <meta property="og:title" content="Tour Archive - Sailing Club Friedrichsdorf">
+    <meta property="og:description" content="Browse past Sailing Club Friedrichsdorf tours">
+    <meta property="og:image" content="images/logo.svg">
+    <meta property="og:url" content="https://sailingclub-friedrichsdorf.com/archive.html">
+    <meta property="og:type" content="website">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/archive.js" type="module"></script>
     <link rel="stylesheet" href="styles/normalize.css">
@@ -66,10 +74,6 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script>
-        document.querySelector("#currentYear").textContent = new Date().getFullYear();
-        document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
-    </script>
 </body>
 
 </html>
