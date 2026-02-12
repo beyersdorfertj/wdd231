@@ -14,15 +14,13 @@
     <link rel="stylesheet" href="styles/frame.css">
     <link rel="stylesheet" href="styles/frame-small.css" media="(max-width: 600px)">
     <link rel="stylesheet" href="styles/frame-large.css" media="(min-width: 601px)">
-    <link rel="stylesheet" href="styles/small.css" media="(max-width: 600px)">
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 601px)">
     <link rel="stylesheet" href="styles/registration.css">
     <link rel="stylesheet" href="styles/registration-small.css" media="(max-width: 600px)">
     <link rel="stylesheet" href="styles/registration-medium.css" media="(min-width: 601px) and (max-width: 1020px)">
     <link rel="stylesheet" href="styles/registration-large.css" media="(min-width: 1021px)">
     <link rel="stylesheet" href="styles/gallery-dialog.css">
     <link rel="stylesheet" href="styles/registration-form.css">
-    <script src="scripts/registration.js" type="module" defer></script>
+    <script src="scripts/registration.js" type="module"></script>
 </head>
 
 <body>
@@ -60,7 +58,7 @@
     <!-- Boat Gallery Modal Dialog -->
     <dialog id="boat-gallery-dialog" class="gallery-dialog">
         <div class="dialog-header">
-            <h3 id="gallery-boat-name"></h3>
+            <h3 id="gallery-boat-name">Boat Gallery</h3>
             <button id="close-gallery-btn" class="close-btn" aria-label="Close gallery">&times;</button>
         </div>
         <div class="boat-gallery">
@@ -81,7 +79,7 @@
         </div>
         <div class="form-content">
             <div class="tour-summary">
-                <h4 id="form-tour-title"></h4>
+                <h4 id="form-tour-title">Tour Registration</h4>
                 <div id="form-tour-details"></div>
             </div>
             <form id="trip-registration-form">
