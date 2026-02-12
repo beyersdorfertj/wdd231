@@ -1,0 +1,77 @@
+/* Home Page - Large Screen Styles (min-width: 601px) */
+@media (min-width: 1001px) {
+
+    main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .welcome-section {
+        grid-column: 1 / -1;
+    }
+
+    .upcoming-section {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .logo-section {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .reports-section {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    /* Tour cards in one line */
+    .tour-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .tour-card h4 {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .tour-card p {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .tour-card .tour-date {
+        flex-shrink: 0;
+    }
+
+    .tour-card .tour-legs {
+        flex-shrink: 0;
+    }
+
+    /* Report cards in one line */
+    .report-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .report-card h4 {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .report-card p {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .report-card .report-date {
+        flex-shrink: 0;
+    }
+
+    .report-card .report-legs {
+        flex-shrink: 0;
+    }
+}

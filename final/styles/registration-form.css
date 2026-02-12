@@ -1,0 +1,409 @@
+/* Trip Registration Form Dialog */
+
+.form-dialog {
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+.form-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.form-content {
+    padding: 1rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.tour-summary {
+    background-color: var(--bg-color);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.tour-summary h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.tour-summary #form-tour-details {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 0.75rem;
+}
+
+.tour-detail-item {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.tour-detail-item strong {
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.tour-detail-item span {
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Required field indicator */
+.form-group label:has(input[required])::after,
+.form-group label:has(select[required])::after,
+.form-group label:has(textarea[required])::after {
+    content: " *";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-left: 4px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+/* Required fields have colored left border */
+.form-group input[required],
+.form-group select[required],
+.form-group textarea[required] {
+    border-left-color: var(--accent-color);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+/* Required fields keep accent color on focus */
+.form-group input[required]:focus,
+.form-group select[required]:focus,
+.form-group textarea[required]:focus {
+    border-left-color: var(--accent-color);
+}
+
+/* Valid required fields turn green */
+.form-group input[required]:valid,
+.form-group select[required]:valid,
+.form-group textarea[required]:valid {
+    border-left-color: #4caf50;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.submit-btn {
+    flex: 1;
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid #1e5a8e;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background-color: #2874b5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:disabled {
+    background-color: #999;
+    border-color: #777;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit-btn:disabled:hover {
+    background-color: #999;
+    transform: none;
+    box-shadow: none;
+}
+
+.cancel-btn {
+    background-color: #999;
+    color: white;
+    border: 2px solid #777;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #777;
+}
+
+/* Series Legs Selection */
+.series-legs-selection {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border: 2px solid var(--accent-color);
+}
+
+.series-legs-info {
+    margin-bottom: 0.5rem;
+}
+
+.series-legs-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+#legs-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.leg-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.leg-checkbox:hover {
+    background-color: #f0f8ff;
+    border-color: var(--primary-color);
+}
+
+.leg-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.leg-details {
+    flex: 1;
+}
+
+.leg-details strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 0.15rem;
+    font-size: 0.9rem;
+}
+
+.leg-details span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.select-all {
+    font-weight: 600;
+    background-color: #e8f4f8;
+    border-color: var(--primary-color);
+}
+
+.select-all input[type="checkbox"] {
+    accent-color: var(--primary-color);
+}
+
+/* Price Summary */
+.price-summary {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+}
+
+.price-row.discount-row {
+    color: var(--accent-color);
+}
+
+.price-row.total-row {
+    border-top: 2px solid var(--border-color);
+    margin-top: 0.35rem;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Thank You Dialog */
+.thank-you-message {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #4caf50;
+    margin: 0;
+    line-height: 1;
+}
+
+.thank-you-message h4 {
+    color: var(--primary-color);
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.thank-you-message>p {
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+.booking-details {
+    margin: 1.5rem 0;
+}
+
+.price-breakdown {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.price-breakdown h5 {
+    margin: 0 0 0.75rem 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+.price-line.discount {
+    color: var(--accent-color);
+}
+
+.price-line.total {
+    border-top: 2px solid var(--border-color);
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.reference-note {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Full leg styling */
+.leg-full {
+    opacity: 0.6;
+    background-color: #f5f5f5 !important;
+}
+
+.leg-full input[type="checkbox"] {
+    cursor: not-allowed;
+}
+
+.leg-full label {
+    cursor: not-allowed;
+    color: #999;
+}
+
+.full-badge {
+    display: inline-block;
+    background-color: #ff5252;
+    color: white;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+.thankyou-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.thankyou-actions .submit-btn {
+    flex: 0 0 auto;
+    min-width: 200px;
+}

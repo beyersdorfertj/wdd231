@@ -1,0 +1,17 @@
+/* Fleet Page - Medium Screen Styles (601px - 1000px) */
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .fleet-container {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .boat-specs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .boat-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

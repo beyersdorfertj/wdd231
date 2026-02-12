@@ -1,0 +1,73 @@
+/* Tour Registration Page - Medium Screen Styles (601px - 1020px) */
+@media (min-width: 601px) and (max-width: 1020px) {
+
+    /* Adjust column widths - only 2 columns visible */
+    .tours-table th:nth-child(1) {
+        width: 40%;
+    }
+
+    .tours-table th:nth-child(3) {
+        width: 60%;
+    }
+
+    /* Hide Date column and last 4 columns on medium screens */
+    .tours-table th:nth-child(2),
+    .tours-table th:nth-child(4),
+    .tours-table th:nth-child(5),
+    .tours-table th:nth-child(6),
+    .tours-table th:nth-child(7),
+    .tours-table td:nth-child(2),
+    .tours-table td:nth-child(4),
+    .tours-table td:nth-child(5),
+    .tours-table td:nth-child(6),
+    .tours-table td:nth-child(7) {
+        display: none;
+    }
+
+    /* Show inline date in Tour column on medium screens */
+    .tour-date-inline {
+        display: block;
+    }
+
+    /* Show the combined info section in Details column */
+    .tours-table td[data-label="Details"] .tour-info-combined {
+        display: grid;
+    }
+
+    .tour-info-item .register-btn {
+        width: 100%;
+        margin-top: 0.25rem;
+    }
+
+    /* Reduce overall font size slightly for medium screens */
+    .tours-table {
+        font-size: 0.9rem;
+    }
+
+    .tour-title {
+        font-size: 1rem;
+    }
+
+    .tour-destination {
+        font-size: 0.85rem;
+    }
+
+    .tour-route {
+        font-size: 0.8rem;
+    }
+
+    .series-name,
+    .leg-info {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .difficulty {
+        padding: 0.3rem 0.65rem;
+        font-size: 0.85rem;
+    }
+
+    .tour-price {
+        font-size: 1.1rem;
+    }
+}

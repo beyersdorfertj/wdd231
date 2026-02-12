@@ -1,0 +1,63 @@
+/* Fleet Page - Small Screen Styles (max-width: 600px) */
+@media (max-width: 600px) {
+
+    .intro-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .fleet-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .boat-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .boat-model {
+        font-size: 1rem;
+    }
+
+    .boat-specs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .spec-label {
+        font-size: 0.75rem;
+    }
+
+    .spec-value {
+        font-size: 1rem;
+    }
+
+    .boat-features ul {
+        columns: 2;
+    }
+
+    .gallery-dialog {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .dialog-header {
+        padding: 1rem;
+    }
+
+    .dialog-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .close-btn {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .boat-gallery {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}

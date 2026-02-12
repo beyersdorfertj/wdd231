@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml">
+    <title>Membership Information - Alpine Adventures</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description" content="Join Alpine Adventures membership">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/frame.css">
+    <link rel="stylesheet" href="styles/frame-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/frame-large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/membership.css">
+    <script src="scripts/membership.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Sailing Club Friedrichsdorf</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Tour Registration</a></li>
+            <li><a href="archive.html">Tour Archive</a></li>
+            <li><a href="fleet.html">Fleet Information</a></li>
+            <li class="current"><a href="#">Membership</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Membership Application</h2>
+        <p>Join Sailing Club Friedrichsdorf and enjoy sailing with fellow enthusiasts. <strong>Members receive a 30%
+                discount on all tours!</strong></p>
+
+        <div id="existing-member-info" class="member-info" style="display: none;">
+            <div class="info-icon">ℹ️</div>
+            <h3>Welcome back, <span id="existing-member-name"></span>!</h3>
+            <p>You have already submitted a membership application on <span id="application-date"></span>.</p>
+            <p>We will contact you at <span id="member-email"></span> once your application has been reviewed.</p>
+        </div>
+
+        <form id="membership-form" method="post" action="thankyou.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="first-name"><span>First Name</span>
+                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                </label>
+
+                <label for="last-name"><span>Last Name</span>
+                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                </label>
+
+                <label for="email"><span>Email Address</span>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </label>
+
+                <label for="phone"><span>Phone Number</span>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                </label>
+
+                <label for="address"><span>Street Address</span>
+                    <input type="text" id="address" name="address" autocomplete="street-address">
+                </label>
+
+                <label for="city"><span>City</span>
+                    <input type="text" id="city" name="city" autocomplete="address-level2">
+                </label>
+
+                <label for="postal-code"><span>Postal Code</span>
+                    <input type="text" id="postal-code" name="postal-code" pattern="[0-9]{5}"
+                        title="Please enter a valid 5-digit postal code" autocomplete="postal-code">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sailing Experience</legend>
+
+                <label for="experience"><span>Sailing Experience Level</span>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select Experience Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </label>
+
+                <label for="certifications"><span>Sailing Certifications (Optional)</span>
+                    <textarea id="certifications" name="certifications" rows="3"
+                        placeholder="List any sailing licenses or certifications you hold"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Emergency Contact</legend>
+
+                <label for="emergency-name"><span>Emergency Contact Name</span>
+                    <input type="text" id="emergency-name" name="emergency-name" required>
+                </label>
+
+                <label for="emergency-phone"><span>Emergency Contact Phone</span>
+                    <input type="tel" id="emergency-phone" name="emergency-phone" required>
+                </label>
+
+                <label for="emergency-relation"><span>Relationship</span>
+                    <input type="text" id="emergency-relation" name="emergency-relation" required
+                        placeholder="e.g., Spouse, Parent, Sibling">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Medical Information</legend>
+
+                <label for="medical-conditions"><span>Medical Conditions (Optional)</span>
+                    <textarea id="medical-conditions" name="medical-conditions" rows="3"
+                        placeholder="Please list any medical conditions we should be aware of"></textarea>
+                </label>
+
+                <label for="medications"><span>Current Medications (Optional)</span>
+                    <textarea id="medications" name="medications" rows="3"
+                        placeholder="List any medications you are currently taking"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+
+                <label for="terms" class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span>I agree to the terms and conditions, including the liability waiver and club rules.</span>
+                </label>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <button type="submit" id="submit-btn" disabled>Apply Now</button>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <h2>Sailing Club<br>Friedrichsdorf</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@sailing-friedrichsdorf.de</p>
+            <p>+49 6172 731-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Final Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Sailing Club Friedrichsdorf</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <!-- Thank You Dialog -->
+    <dialog id="thankyou-dialog">
+        <div class="dialog-content">
+            <div class="success-icon">✓</div>
+            <h2>Thank You<span id="member-name"></span>!</h2>
+            <p>Your membership application has been submitted successfully.</p>
+            <p>We will review your application and contact you soon.</p>
+            <div class="thankyou-actions">
+                <button type="button" id="close-thankyou" class="primary-btn">Return to Home</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        document.querySelector("#currentYear").textContent = new Date().getFullYear();
+        document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    </script>
+</body>
+
+</html>

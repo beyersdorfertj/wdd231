@@ -1,0 +1,53 @@
+/* Fleet Page - Large Screen Styles (min-width: 1001px) */
+@media (min-width: 1001px) {
+
+    .fleet-container {
+        grid-template-columns: 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .boat-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+    }
+
+    .boat-main-image {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .boat-header {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .boat-specs {
+        grid-column: 2;
+        grid-row: 2;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .boat-description {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .boat-features {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .view-gallery-btn {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .boat-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

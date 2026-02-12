@@ -1,0 +1,304 @@
+/* Membership Form Styles */
+:root {
+    --primary-color: #2c5f7a;
+    --secondary-color: #4a8fb7;
+    --accent-color: #f4a460;
+    --text-color: #333;
+    --border-color: #ccc;
+    --bg-light: #f9f9f9;
+    --success-color: #4caf50;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+main>p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Existing Member Info */
+.member-info {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.member-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.member-info p {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.member-info span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Form Styles */
+form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem;
+}
+
+fieldset:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+
+/* Label and Input Styles */
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label:last-of-type {
+    margin-bottom: 0;
+}
+
+label span {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+/* Required field indicator */
+label:has(input:required) span::after,
+label:has(select:required) span::after,
+label:has(textarea:required) span::after {
+    content: " *";
+    color: var(--accent-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Required field styling */
+input:required,
+select:required,
+textarea:required {
+    border-left: 4px solid var(--accent-color);
+}
+
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+    border-left: 4px solid var(--success-color);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+select {
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Checkbox Styles */
+.checkbox-label {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding-left: 4px;
+    border-left: 4px solid transparent;
+    margin-left: -4px;
+}
+
+.checkbox-label:has(input[type="checkbox"]:required) {
+    border-left-color: var(--accent-color);
+}
+
+.checkbox-label:has(input[type="checkbox"]:checked) {
+    border-left-color: var(--success-color);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-label span {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: 3px solid #1e5a8e;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #2874b5;
+    transform: scale(1.02);
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    border-color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Thank You Dialog */
+#thankyou-dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+#thankyou-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.success-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--success-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+    font-weight: bold;
+}
+
+.dialog-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.dialog-content p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.thankyou-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.primary-btn {
+    padding: 0.75rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: 3px solid #1e5a8e;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 200px;
+}
+
+.primary-btn:hover {
+    background-color: #2874b5;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        margin: 1rem auto;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 16px;
+        /* Prevents zoom on mobile */
+    }
+}

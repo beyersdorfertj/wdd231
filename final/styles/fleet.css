@@ -1,0 +1,134 @@
+/* Fleet Page - Base Styles */
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.fleet-container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.boat-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.boat-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.boat-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.boat-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.boat-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.boat-model {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.boat-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.spec-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spec-value {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.boat-description {
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.boat-description p {
+    margin: 0;
+    color: #333;
+}
+
+.boat-features {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.boat-features h4 {
+    margin: 0 0 0.75rem 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.boat-features ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: "✓ ";
+    columns: 3;
+    column-gap: 1.5rem;
+}
+
+.boat-features li {
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.view-gallery-btn {
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-gallery-btn:hover {
+    background-color: #e89850;
+}

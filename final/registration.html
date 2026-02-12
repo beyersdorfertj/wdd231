@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml">
+    <title>Tour Registration - Sailing Club Friedrichsdorf</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description" content="Browse and register for upcoming sailing tours">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/frame.css">
+    <link rel="stylesheet" href="styles/frame-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/frame-large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/registration.css">
+    <link rel="stylesheet" href="styles/registration-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/registration-medium.css" media="(min-width: 601px) and (max-width: 1020px)">
+    <link rel="stylesheet" href="styles/registration-large.css" media="(min-width: 1021px)">
+    <link rel="stylesheet" href="styles/gallery-dialog.css">
+    <link rel="stylesheet" href="styles/registration-form.css">
+    <script src="scripts/registration.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Sailing Club Friedrichsdorf</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="#">Tour Registration</a></li>
+            <li><a href="archive.html">Tour Archive</a></li>
+            <li><a href="fleet.html">Fleet Information</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Upcoming Sailing Tours</h2>
+        <p class="intro-text">Browse our upcoming sailing tours and register for your next adventure. All tours include
+            experienced skippers, safety equipment, and memorable experiences.</p>
+
+        <div id="member-discount-banner" class="discount-banner">
+            <div class="banner-icon">🎉</div>
+            <div class="banner-content">
+                <h3>Member Exclusive: 30% Discount!</h3>
+                <p>Become a member and save 30% on all sailing tours.</p>
+            </div>
+            <a href="membership.html" class="membership-btn">Join Now</a>
+        </div>
+
+        <div id="upcoming-tours"></div>
+    </main>
+
+    <!-- Boat Gallery Modal Dialog -->
+    <dialog id="boat-gallery-dialog" class="gallery-dialog">
+        <div class="dialog-header">
+            <h3 id="gallery-boat-name"></h3>
+            <button id="close-gallery-btn" class="close-btn" aria-label="Close gallery">&times;</button>
+        </div>
+        <div class="boat-gallery">
+            <div class="gallery-main-image">
+                <button id="prev-image-btn" class="nav-btn prev-btn" aria-label="Previous image">&lsaquo;</button>
+                <div id="gallery-main-image"></div>
+                <button id="next-image-btn" class="nav-btn next-btn" aria-label="Next image">&rsaquo;</button>
+            </div>
+            <div id="gallery-thumbnails" class="gallery-thumbnails"></div>
+        </div>
+    </dialog>
+
+    <!-- Trip Registration Form Dialog -->
+    <dialog id="registration-form-dialog" class="form-dialog">
+        <div class="dialog-header">
+            <h3>Trip Registration</h3>
+            <button id="close-form-btn" class="close-btn" aria-label="Close form">&times;</button>
+        </div>
+        <div class="form-content">
+            <div class="tour-summary">
+                <h4 id="form-tour-title"></h4>
+                <div id="form-tour-details"></div>
+            </div>
+            <form id="trip-registration-form">
+                <input type="hidden" id="form-tour-id" name="tourId">
+                <input type="hidden" id="form-series-name" name="seriesName">
+
+                <!-- Series Legs Selection (only shown for series tours) -->
+                <div id="series-legs-selection" class="form-group" style="display: none;">
+                    <label>Select Tour Legs *</label>
+                    <div class="series-legs-info">
+                        <p><strong id="series-discount-text"></strong></p>
+                    </div>
+                    <div id="legs-checkboxes" class="legs-checkboxes"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="participants">Number of Participants *</label>
+                    <input type="number" id="participants" name="participants" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Sailing Experience</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select your experience level</option>
+                        <option value="beginner">Beginner - No experience</option>
+                        <option value="some">Some experience</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                    <button type="button" class="cancel-btn"
+                        onclick="document.getElementById('registration-form-dialog').close()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- Thank You Dialog -->
+    <dialog id="thank-you-dialog" class="form-dialog">
+        <div class="dialog-header">
+            <h3>✓ Registration Successful</h3>
+            <button id="close-thankyou-btn" class="close-btn" aria-label="Close">&times;</button>
+        </div>
+        <div class="form-content">
+            <div class="thank-you-message">
+                <p class="success-icon">✓</p>
+                <h4>Thank you for your registration!</h4>
+                <p>We have received your registration and will contact you at <strong id="thankyou-email"></strong> to
+                    confirm your booking.</p>
+
+                <div id="thankyou-details" class="booking-details"></div>
+
+                <p class="reference-note">Reference: <strong id="thankyou-reference"></strong></p>
+            </div>
+            <div class="thankyou-actions">
+                <button class="submit-btn" onclick="document.getElementById('thank-you-dialog').close()">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div>
+            <h2>Sailing Club<br>Friedrichsdorf</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@sailing-friedrichsdorf.de</p>
+            <p>+49 6172 731-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Final Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Sailing Club Friedrichsdorf</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector("#currentYear").textContent = new Date().getFullYear();
+        document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    </script>
+</body>
+
+</html>

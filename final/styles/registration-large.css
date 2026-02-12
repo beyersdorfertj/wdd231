@@ -1,0 +1,36 @@
+/* Tour Registration Page - Large Screen Styles (min-width: 601px) */
+@media (min-width: 1021px) {
+
+    .tours-table th:nth-child(1) {
+        width: 20%;
+    }
+
+    .tours-table th:nth-child(2) {
+        width: 12%;
+    }
+
+    .tours-table th:nth-child(3) {
+        width: 18%;
+    }
+
+    .tours-table th:nth-child(4) {
+        width: 12%;
+    }
+
+    .tours-table th:nth-child(5) {
+        width: 12%;
+    }
+
+    .tours-table th:nth-child(6) {
+        width: 12%;
+    }
+
+    .tours-table th:nth-child(7) {
+        width: 14%;
+    }
+
+    /* Hide combined info section on large screens - info shown in separate columns */
+    .tour-info-combined {
+        display: none;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml">
+    <title>Home - Sailing Club Friedrichsdorf</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="The Sailing Club Friedrichsdorf website serves as a comprehensive platform for club members and prospective sailors.">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/frame.css">
+    <link rel="stylesheet" href="styles/frame-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/frame-large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/home-medium.css" media="(min-width: 601px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="styles/home-large.css" media="(min-width: 1001px)">
+    <script src="scripts/home.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Sailing Club Friedrichsdorf</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="registration.html">Tour Registration</a></li>
+            <li><a href="archive.html">Tour Archive</a></li>
+            <li><a href="fleet.html">Fleet Information</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="images/hero.webp" alt="Sailing Club Friedrichsdorf" loading="eager">
+        <div class="hero-content">
+            <h1>Sailing Club Friedrichsdorf</h1>
+            <p>Experience the joy of sailing</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Welcome to Sailing Club Friedrichsdorf</h2>
+            <p>Experience the joy of sailing with our club tours and community. Join us for unforgettable adventures on
+                the water.</p>
+        </section>
+
+        <!-- Upcoming Tours Section -->
+        <section class="upcoming-section">
+            <h3>Upcoming Tours</h3>
+            <div id="upcoming-tours-home"></div>
+            <a href="registration.html" class="view-all-btn">View All Tours</a>
+        </section>
+
+        <!-- Reports Section -->
+        <section class="reports-section">
+            <h3>Latest Reports</h3>
+            <div id="latest-reports"></div>
+            <a href="archive.html" class="view-all-btn">View Archive</a>
+        </section>
+
+        <!-- Logo Section -->
+        <section class="logo-section">
+            <svg class="large-logo" xmlns="http://www.w3.org/2000/svg" height="200px" viewBox="0 -960 960 960"
+                width="200px">
+                <!-- Sonne (Sunset Orange) - statisch -->
+                <g id="sun">
+                    <circle cx="190" cy="-800" r="100" fill="#e07a3f" />
+                    <path
+                        d="M100-920 100-930 M100-790 100-800 M35-860 25-860 M165-860 175-860 M53-913 46-920 M147-807 154-800 M53-807 46-800 M147-913 154-920"
+                        stroke="#e07a3f" stroke-width="3" stroke-linecap="round" />
+                </g>
+
+                <!-- Segel (Dreieck links - Warm Sand) - animiert -->
+                <g id="sail-left">
+                    <path d="m129-420 301-438v438H129Zm115-60h126v-187L244-480Z" fill="#e0c9a6" />
+                </g>
+
+                <!-- Segel (rechter Bereich - Ocean Blue) - animiert -->
+                <g id="sail-right">
+                    <path
+                        d="M514-420q19-60 27.5-120.5T550-670q0-66-8.5-128.5T514-918q47 19 101 66.5T716-737q47 67 79 148.5T830-420H514Zm75-60h175q-17-87-62.5-168T602-782q5 30 6.5 59t1.5 53q0 46-6.5 99T589-480Z"
+                        fill="#1e5a7d" />
+                </g>
+
+                <!-- Wellen (mittlerer Bereich - Ocean Blue) - animiert -->
+                <g id="waves-middle">
+                    <path
+                        d="M360-196q-34 0-65-18.5T240-261q-14 14-33.5 27.5T169-213q-29-18-54-53.5T82-340h796q-8 38-33 73.5T791-213q-18-7-37.5-20.5T720-261q-24 28-55 46.5T600-196q-34 0-65-18.5T480-261q-24 28-55 46.5T360-196Z"
+                        fill="#1e5a7d" />
+                </g>
+
+                <!-- Wellen (unterer Bereich - Dark Gray) - animiert -->
+                <g id="waves-bottom">
+                    <path
+                        d="M80-40v-60h40q32 0 61.5-10.5T240-149q29 28 59 38.5t61 10.5q32 0 61.5-10.5T480-149q29 28 59 38.5t61 10.5q32 0 61.5-10.5T720-149q29 28 58.5 38.5T840-100h40v60h-40q-29 0-59.5-8.5T720-80q-30 23-60.5 31.5T600-40q-29 0-59.5-8.5T480-80q-30 23-60.5 31.5T360-40q-29 0-59.5-8.5T240-80q-30 23-60.5 31.5T120-40H80Z"
+                        fill="#2c3e50" />
+                </g>
+            </svg>
+            <p class="logo-tagline">Sailing Together Since 1985</p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2>Sailing Club<br>Friedrichsdorf</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@sailing-friedrichsdorf.de</p>
+            <p>+49 6172 731-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Final Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Sailing Club Friedrichsdorf</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector("#currentYear").textContent = new Date().getFullYear();
+        document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+/* Header and Navigation - Large Screens (min-width: 38rem) */
+@media only screen and (min-width: 601px) {
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        border-bottom: solid 1px var(--border-color);
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    /**************************** FOOTER ****************************/
+    footer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        align-items: center;
+        padding: 1rem 0px;
+        text-align: center;
+    }
+
+    footer h2 {
+        margin: 5px;
+    }
+
+    footer p {
+        margin: 2px;
+    }
+}

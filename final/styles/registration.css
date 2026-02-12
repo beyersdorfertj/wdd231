@@ -1,0 +1,303 @@
+/* Tour Registration Page - Base Styles */
+
+.intro-text {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Member Discount Banner */
+.discount-banner {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
+    border: 3px solid #ffc107;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2);
+}
+
+.discount-banner.member-active {
+    background: linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%);
+    border-color: #4caf50;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+.discount-banner.member-active .banner-icon {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.discount-banner.member-active .banner-content h3 {
+    color: #2e7d32;
+}
+
+.banner-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.banner-content {
+    flex: 1;
+}
+
+.banner-content h3 {
+    color: #f57f17;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.banner-content p {
+    color: #666;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.membership-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 3px solid #1e5a8e;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.membership-btn:hover {
+    background-color: #2874b5;
+    transform: scale(1.05);
+}
+
+#upcoming-tours {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.tours-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tours-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tours-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.tours-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.tours-table tbody tr:hover {
+    background-color: var(--bg-color);
+}
+
+.tours-table td {
+    padding: 1rem;
+    vertical-align: top;
+}
+
+/* Tour title and series styling */
+.tour-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.series-badge {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.series-name {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Single tour name uses same styling as series name */
+.tour-single-name {
+    background-color: var(--secondary-color);
+    font-size: 1rem;
+    padding: 0.3rem 0.75rem;
+}
+
+.leg-info {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.tour-destination {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tour-route {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+/* Date inline in tour column - hidden by default, shown on medium screens */
+.tour-date-inline {
+    display: none;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.75rem;
+}
+
+.difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.difficulty-beginner,
+.difficulty-beginner-friendly {
+    background-color: #28a745;
+    color: white;
+}
+
+.difficulty-intermediate {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.difficulty-advanced {
+    background-color: #dc3545;
+    color: white;
+}
+
+.tour-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.tour-details {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.boat-btn {
+    background-color: var(--primary-color);
+    border: 3px solid #1e5a8e;
+    color: white;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boat-btn:hover {
+    background-color: #2874b5;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boat-btn::after {
+    content: " 🚢";
+    margin-left: 0.3rem;
+}
+
+.spots-available {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.spots-limited {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.spots-full {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.register-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 3px solid #1e5a8e;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover:not(:disabled) {
+    background-color: #2874b5;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.register-btn:disabled {
+    background-color: #999;
+    border-color: #777;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Combined info section styling (display controlled in size-specific files) */
+.tour-info-combined {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.tour-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.tour-info-item label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

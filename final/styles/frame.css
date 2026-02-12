@@ -1,0 +1,143 @@
+/* Base Styles */
+:root {
+    --primary-color: #2c5f7a;
+    --secondary-color: #4a8fb7;
+    --accent-color: #f4a460;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #ddd;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+main h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Header and Navigation - Base Styles */
+
+/**************************** HEADER ****************************/
+header {
+    display: grid;
+    column-gap: 8px;
+    align-items: center;
+    border-bottom: solid 1px var(--border-color);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    width: 44px;
+    height: 44px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.hamburger::after {
+    content: "☰";
+    font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "×";
+}
+
+/**************************** NAVIGATION ****************************/
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navigation li.current {
+    background-color: var(--accent-color);
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/**************************** FOOTER ****************************/
+footer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0px;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    margin: 5px;
+    color: white;
+}
+
+footer p {
+    margin: 2px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ffc580 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social img {
+    display: block;
+}

@@ -1,0 +1,46 @@
+/* Archive Page - Small Screen Styles */
+@media (max-width: 600px) {
+
+    #trip-reports {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .trip-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "trip-image"
+            "trip-header"
+            "trip-meta"
+            "trip-summary"
+            "button";
+    }
+
+    .trip-card img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .trip-header {
+        margin: 1rem 1rem 0.75rem 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .trip-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .trip-meta {
+        margin: 0.75rem 1rem;
+    }
+
+    .trip-summary {
+        margin: 0.75rem 1rem;
+        padding: 0.75rem;
+    }
+
+    .read-more-btn {
+        margin: 0 1rem 1rem 1rem;
+        padding: 0.625rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}

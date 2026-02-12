@@ -1,0 +1,56 @@
+/* Home Page - Small Screen Styles (max-width: 600px) */
+@media (max-width: 600px) {
+
+    main {
+        margin: 1rem auto;
+        gap: 1.5rem;
+    }
+
+    .welcome-section {
+        order: 1;
+        padding: 2rem 1.5rem;
+    }
+
+    .upcoming-section {
+        order: 2;
+    }
+
+    .logo-section {
+        order: 3;
+    }
+
+    .reports-section {
+        order: 4;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+    }
+
+    .upcoming-section,
+    .reports-section {
+        padding: 1.5rem;
+    }
+
+    .upcoming-section h3,
+    .reports-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .large-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-tagline {
+        font-size: 1.1rem;
+    }
+
+    .logo-section {
+        padding: 2rem 1.5rem;
+    }
+}
