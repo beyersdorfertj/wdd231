@@ -1,23 +1,7 @@
 /* Membership Form Styles */
-:root {
-    --primary-color: #2c5f7a;
-    --secondary-color: #4a8fb7;
-    --accent-color: #f4a460;
-    --text-color: #333;
-    --border-color: #ccc;
-    --bg-light: #f9f9f9;
-    --success-color: #4caf50;
-}
 
 main {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-main h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
 }
 
 main>p {

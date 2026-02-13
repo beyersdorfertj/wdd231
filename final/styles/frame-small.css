@@ -1,18 +1,23 @@
 /* Header and Navigation - Small Screens (max-width: 38rem) */
 @media only screen and (max-width: 600px) {
-header {
-    grid-template-columns: 24px auto 44px;
-}
+    header {
+        grid-template-columns: 24px auto 44px;
+    }
 
-.navigation {
-    display: none;
-}
+    .navigation {
+        display: none;
+    }
 
-.navigation.show {
-    display: block;
-}
+    .navigation.show {
+        display: block;
+    }
 
-.navigation a {
-    border-bottom: solid 1px var(--border-color);
-}
+    .navigation a {
+        border-bottom: solid 1px var(--border-color);
+    }
+
+    /**************************** FOOTER ****************************/
+    footer {
+        grid-template-rows: auto auto auto;
+    }
 }

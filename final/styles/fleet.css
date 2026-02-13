@@ -1,12 +1,5 @@
 /* Fleet Page - Base Styles */
 
-.intro-text {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    color: #666;
-}
-
 .fleet-container {
     display: grid;
     gap: 2rem;

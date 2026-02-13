@@ -24,19 +24,7 @@
 
     /**************************** FOOTER ****************************/
     footer {
-        display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto;
-        align-items: center;
-        padding: 1rem 0px;
-        text-align: center;
-    }
-
-    footer h2 {
-        margin: 5px;
-    }
-
-    footer p {
-        margin: 2px;
     }
 }

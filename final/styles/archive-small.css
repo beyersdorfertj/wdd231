@@ -6,16 +6,6 @@
         gap: 1.5rem;
     }
 
-    .trip-card {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "trip-image"
-            "trip-header"
-            "trip-meta"
-            "trip-summary"
-            "button";
-    }
-
     .trip-card img {
         aspect-ratio: 16 / 9;
     }

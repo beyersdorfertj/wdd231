@@ -1,12 +1,5 @@
 /* Tour Registration Page - Base Styles */
 
-.intro-text {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    color: #666;
-    text-align: center;
-}
-
 /* Member Discount Banner */
 .discount-banner {
     background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);

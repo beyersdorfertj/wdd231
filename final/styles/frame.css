@@ -24,9 +24,35 @@ body {
     line-height: 1.6;
 }
 
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
 main h1 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+main h2 {
+    color: var(--primary-color);
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Common Button Styles */
+button,
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s;
 }
 
 /* Visually Hidden - for screen readers only */
@@ -108,7 +134,6 @@ header span {
 /**************************** FOOTER ****************************/
 footer {
     display: grid;
-    grid-template-rows: auto auto auto;
     align-items: center;
     gap: 0.5rem;
     background-color: var(--primary-color);
