@@ -58,7 +58,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: var(--bg-color);
 }
 
 .spec-item {

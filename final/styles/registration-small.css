@@ -1,178 +1,178 @@
 /* Tour Registration Page - Small Screen Styles (max-width: 600px) */
 @media (max-width: 600px) {
 
-/* Responsive Discount Banner */
-.discount-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 1.25rem;
-}
+    /* Responsive Discount Banner */
+    .discount-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.25rem;
+    }
 
-.discount-banner.member-active {
-    flex-direction: row;
-    text-align: left;
-}
+    .discount-banner.member-active {
+        flex-direction: row;
+        text-align: left;
+    }
 
-.discount-banner.member-active .banner-icon {
-    font-size: 2rem;
-}
+    .discount-banner.member-active .banner-icon {
+        font-size: 2rem;
+    }
 
-.banner-icon {
-    font-size: 2.5rem;
-}
+    .banner-icon {
+        font-size: 2.5rem;
+    }
 
-.banner-content h3 {
-    font-size: 1.1rem;
-}
+    .banner-content h3 {
+        font-size: 1.1rem;
+    }
 
-.banner-content p {
-    font-size: 0.9rem;
-}
+    .banner-content p {
+        font-size: 0.9rem;
+    }
 
-.membership-btn {
-    width: 100%;
-    text-align: center;
-}
+    .membership-btn {
+        width: 100%;
+        text-align: center;
+    }
 
-.intro-text {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
+    .intro-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
 
-.tours-table {
-    font-size: 0.9rem;
-    box-shadow: none;
-}
+    .tours-table {
+        font-size: 0.9rem;
+        box-shadow: none;
+    }
 
-/* Hide table header */
-.tours-table thead {
-    display: none;
-}
+    /* Hide table header */
+    .tours-table thead {
+        display: none;
+    }
 
-/* Each row becomes a card */
-.tours-table tbody tr {
-    display: block;
-    margin-bottom: 1.5rem;
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.25rem;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+    /* Each row becomes a card */
+    .tours-table tbody tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.25rem;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.tours-table tbody tr:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    .tours-table tbody tr:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-/* Stack all cells */
-.tours-table td {
-    display: block;
-    padding: 0.75rem 0;
-    border: none;
-    border-bottom: 1px solid #f0f0f0;
-}
+    /* Stack all cells */
+    .tours-table td {
+        display: block;
+        padding: 0.75rem 0;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
 
-.tours-table td:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
+    .tours-table td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 
-/* Add labels before content */
-.tours-table td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    display: block;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-}
+    /* Add labels before content */
+    .tours-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        display: block;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
 
-/* Tour title styling for mobile */
-.tours-table td[data-label="Tour"] {
-    padding-top: 0;
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 0.5rem;
-}
+    /* Tour title styling for mobile */
+    .tours-table td[data-label="Tour"] {
+        padding-top: 0;
+        border-bottom: 2px solid var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
 
-.tours-table td[data-label="Tour"]::before {
-    display: none;
-    /* Hide "Tour" label since it's obvious */
-}
+    .tours-table td[data-label="Tour"]::before {
+        display: none;
+        /* Hide "Tour" label since it's obvious */
+    }
 
-.tour-title {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-}
+    .tour-title {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.75rem;
+    }
 
-/* Show series badge on mobile in Tour column */
-.tours-table td[data-label="Tour"] .series-badge {
-    display: inline-flex;
-}
+    /* Show series badge on mobile in Tour column */
+    .tours-table td[data-label="Tour"] .series-badge {
+        display: inline-flex;
+    }
 
-.series-badge {
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
-}
+    .series-badge {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
 
-.tour-destination {
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-}
+    .tour-destination {
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+    }
 
-.tour-route {
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
-    color: #666;
-}
+    .tour-route {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+        color: #666;
+    }
 
-/* Details section */
-.tours-table td[data-label="Details"] {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 0.75rem 0;
-}
+    /* Details section */
+    .tours-table td[data-label="Details"] {
+        background-color: var(--bg-color);
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 0.75rem 0;
+    }
 
-.tour-details {
-    line-height: 1.6;
-}
+    .tour-details {
+        line-height: 1.6;
+    }
 
-/* Action button */
-.tours-table td[data-label="Action"] {
-    padding-top: 1rem;
-}
+    /* Action button */
+    .tours-table td[data-label="Action"] {
+        padding-top: 1rem;
+    }
 
-.tours-table td[data-label="Action"]::before {
-    display: none;
-    /* Hide "Action" label */
-}
+    .tours-table td[data-label="Action"]::before {
+        display: none;
+        /* Hide "Action" label */
+    }
 
-.register-btn {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-}
+    .register-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
 
-/* Larger badges on mobile */
-.difficulty {
-    padding: 0.4rem 1rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
+    /* Larger badges on mobile */
+    .difficulty {
+        padding: 0.4rem 1rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
 
-.series-name,
-.leg-info {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
-}
+    .series-name,
+    .leg-info {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
 
-/* Hide combined info section on mobile - info shown separately */
-.tour-info-combined {
-    display: none;
-}
+    /* Hide combined info section on mobile - info shown separately */
+    .tour-info-combined {
+        display: none;
+    }
 }
