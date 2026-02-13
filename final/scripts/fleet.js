@@ -157,15 +157,21 @@ function closeGallery() {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    displayBoats();
+    // Only call displayBoats if we're on the fleet page
+    const container = document.getElementById('fleet-container');
+    if (container) {
+        displayBoats();
+    }
 
-    // Close on backdrop click
+    // Close on backdrop click (only if dialog exists)
     const dialog = document.getElementById('boat-gallery-dialog');
-    dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) {
-            closeGallery();
-        }
-    });
+    if (dialog) {
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                closeGallery();
+            }
+        });
+    }
 });
 
 // Export function for use from other pages
