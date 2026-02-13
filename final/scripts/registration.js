@@ -307,13 +307,32 @@ function updatePriceSummary(seriesLegs, totalLegs) {
         discountPercent = selectedCount === 2 ? 8 : 10;
     }
 
-    const discountAmount = subtotal * (discountPercent / 100);
-    const total = subtotal - discountAmount;
+    // Check if user is a member for additional 30% discount
+    const membershipData = localStorage.getItem('membershipApplication');
+    const isMember = membershipData !== null;
+
+    // Apply series discount first
+    let discountedPrice = subtotal * (1 - discountPercent / 100);
+
+    // Then apply member discount on top
+    if (isMember) {
+        discountedPrice = discountedPrice * 0.7; // 30% off
+    }
+
+    const total = discountedPrice;
 
     // Update price display
     priceDisplay.style.color = '';
-    if (discountPercent > 0) {
-        priceDisplay.innerHTML = `<span style="text-decoration: line-through; color: #999;">€${subtotal.toFixed(2)}</span> <span style="color: var(--accent-color); font-weight: bold;">€${total.toFixed(2)}</span> <small>(-${discountPercent}%)</small>`;
+    if (discountPercent > 0 || isMember) {
+        let discountInfo = '';
+        if (discountPercent > 0 && isMember) {
+            discountInfo = `<small>(-${discountPercent}% series, -30% member)</small>`;
+        } else if (discountPercent > 0) {
+            discountInfo = `<small>(-${discountPercent}%)</small>`;
+        } else if (isMember) {
+            discountInfo = `<small>(-30% member)</small>`;
+        }
+        priceDisplay.innerHTML = `<span style="text-decoration: line-through; color: #999;">€${subtotal.toFixed(2)}</span> <span style="color: var(--accent-color); font-weight: bold;">€${total.toFixed(2)}</span> ${discountInfo}`;
     } else {
         priceDisplay.textContent = `€${total.toFixed(2)}`;
     }
@@ -366,6 +385,17 @@ function displayTours() {
     upcomingTours.forEach(tour => {
         tbody.appendChild(createTourRow(tour));
     });
+}
+
+// Generate booking reference number
+function generateBookingReference() {
+    const year = new Date().getFullYear();
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // Excluding confusing chars like I, O, 0, 1
+    let randomPart = '';
+    for (let i = 0; i < 6; i++) {
+        randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return `REF-${year}-${randomPart}`;
 }
 
 // Initialize
@@ -427,9 +457,12 @@ form.addEventListener('submit', (e) => {
     // Prepare thank you message
     const thankYouDialog = document.getElementById('thank-you-dialog');
     document.getElementById('thankyou-email').textContent = data.email;
-    document.getElementById('thankyou-reference').textContent = data.tourId;
+    document.getElementById('thankyou-reference').textContent = generateBookingReference();
+
+    const isMember = localStorage.getItem('membershipApplication') !== null;
 
     let detailsHTML = '';
+    let finalPrice = 0;
 
     if (selectedLegs.length > 1) {
         // Calculate total price for selected legs (convert string IDs to numbers)
@@ -447,8 +480,28 @@ form.addEventListener('submit', (e) => {
 
         // Calculate discount
         const discountPercent = selectedLegs.length === 2 ? 8 : 10;
-        const discountAmount = totalPrice * (discountPercent / 100);
-        const finalPrice = totalPrice - discountAmount;
+        let discountAmount = totalPrice * (discountPercent / 100);
+        finalPrice = totalPrice - discountAmount;
+
+        // Check if user is a member for additional 30% discount
+        if (isMember) {
+            finalPrice = finalPrice * 0.7; // Apply 30% member discount on top of series discount
+        }
+
+        let discountHTML = `
+                <div class="price-line discount">
+                    <span>Series discount (${discountPercent}%):</span>
+                    <span>-€${discountAmount.toFixed(2)}</span>
+                </div>`;
+
+        if (isMember) {
+            const memberDiscount = (totalPrice - discountAmount) * 0.3;
+            discountHTML += `
+                <div class="price-line discount">
+                    <span>Member discount (30%):</span>
+                    <span>-€${memberDiscount.toFixed(2)}</span>
+                </div>`;
+        }
 
         detailsHTML = `
             <div class="price-breakdown">
@@ -457,16 +510,58 @@ form.addEventListener('submit', (e) => {
                     <span>Selected ${selectedLegs.length} legs:</span>
                     <span>€${totalPrice.toFixed(2)}</span>
                 </div>
-                <div class="price-line discount">
-                    <span>Discount (${discountPercent}%):</span>
-                    <span>-€${discountAmount.toFixed(2)}</span>
-                </div>
+                ${discountHTML}
                 <div class="price-line total">
                     <strong>Total Price:</strong>
                     <strong>€${finalPrice.toFixed(2)}</strong>
                 </div>
             </div>
         `;
+    } else {
+        // Single tour
+        const tour = upcomingTours.find(t => t.id === data.tourId);
+        if (tour) {
+            const priceMatch = tour.price.match(/[\d,]+/);
+            if (priceMatch) {
+                const originalPrice = parseFloat(priceMatch[0].replace(/,/g, ''));
+
+                if (isMember) {
+                    // Show member discount
+                    finalPrice = originalPrice * 0.7; // 30% discount
+                    const discount = originalPrice * 0.3;
+
+                    detailsHTML = `
+                        <div class="price-breakdown">
+                            <h5>Price Breakdown</h5>
+                            <div class="price-line">
+                                <span>Tour price:</span>
+                                <span>€${originalPrice.toFixed(2)}</span>
+                            </div>
+                            <div class="price-line discount">
+                                <span>Member discount (30%):</span>
+                                <span>-€${discount.toFixed(2)}</span>
+                            </div>
+                            <div class="price-line total">
+                                <strong>Total Price:</strong>
+                                <strong>€${finalPrice.toFixed(2)}</strong>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // No discount for non-members
+                    finalPrice = originalPrice;
+                    detailsHTML = `
+                        <div class="price-breakdown">
+                            <h5>Price Breakdown</h5>
+                            <div class="price-line total">
+                                <strong>Total Price:</strong>
+                                <strong>€${finalPrice.toFixed(2)}</strong>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        }
     }
 
     document.getElementById('thankyou-details').innerHTML = detailsHTML;

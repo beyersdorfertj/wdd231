@@ -343,7 +343,7 @@
 }
 
 .price-line.discount {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 .price-line.total {

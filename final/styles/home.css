@@ -1,7 +1,6 @@
 /* Home Page Styles */
 
 main {
-    padding: 0;
     display: grid;
     gap: 2rem;
 }
