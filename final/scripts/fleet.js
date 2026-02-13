@@ -63,6 +63,10 @@ function createBoatCard(boat) {
 // Display all boats
 function displayBoats() {
     const container = document.getElementById('fleet-container');
+    if (!container) {
+        console.error('Fleet container not found');
+        return;
+    }
     boats.forEach(boat => {
         container.appendChild(createBoatCard(boat));
     });
