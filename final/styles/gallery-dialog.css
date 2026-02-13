@@ -1,58 +1,14 @@
-/* Boat Gallery Modal Dialog - Shared Styles */
+/* Boat Gallery Modal Dialog - Specific Styles */
 
 .gallery-dialog {
     max-width: 1200px;
     width: 90%;
     height: 85vh;
-    border: none;
-    border-radius: 12px;
-    padding: 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    margin: auto;
 }
 
 .gallery-dialog[open] {
     display: flex;
     flex-direction: column;
-}
-
-.gallery-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.dialog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.dialog-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
-
-.close-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .boat-gallery {
@@ -73,7 +29,7 @@
     min-height: 0;
 }
 
-.gallery-main-image > div {
+.gallery-main-image>div {
     width: 100%;
     height: 100%;
     display: flex;
