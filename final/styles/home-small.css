@@ -7,20 +7,7 @@
     }
 
     .welcome-section {
-        order: 1;
         padding: 2rem 1.5rem;
-    }
-
-    .upcoming-section {
-        order: 2;
-    }
-
-    .logo-section {
-        order: 3;
-    }
-
-    .reports-section {
-        order: 4;
     }
 
     .welcome-section h2 {
