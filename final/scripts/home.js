@@ -10,10 +10,10 @@ async function loadToursData() {
     const reportsContainer = document.getElementById('latest-reports');
 
     if (toursContainer) {
-        toursContainer.innerHTML = '<p class="loading-message">Daten werden geladen...</p>';
+        toursContainer.innerHTML = '<p class="loading-message">loading data...</p>';
     }
     if (reportsContainer) {
-        reportsContainer.innerHTML = '<p class="loading-message">Daten werden geladen...</p>';
+        reportsContainer.innerHTML = '<p class="loading-message">loading data...</p>';
     }
 
     try {
@@ -28,9 +28,11 @@ async function loadToursData() {
         const data = await response.json();
         upcomingTours = data;
 
+//        throw new Error("Something went wrong");
+
         // Display tours and reports after data is loaded
-        // displayUpcomingTours();
-        // displayLatestReports();
+        displayUpcomingTours();
+        displayLatestReports();
 
     } catch (error) {
         console.error('Failed to load tours data:', error);
