@@ -58,7 +58,7 @@
 }
 
 .trip-date {
-    color: #666;
+    color: var(--text-light);
     font-style: italic;
     margin: 0;
 }

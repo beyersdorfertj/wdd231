@@ -2,30 +2,30 @@
 
 /* Member Discount Banner */
 .discount-banner {
-    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
-    border: 3px solid #ffc107;
+    background: linear-gradient(135deg, var(--warning-gradient-start) 0%, var(--warning-gradient-end) 100%);
+    border: 3px solid var(--warning-color);
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem 0;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2);
+    box-shadow: 0 4px 8px var(--shadow-warning);
 }
 
 .discount-banner.member-active {
-    background: linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%);
-    border-color: #4caf50;
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+    background: linear-gradient(135deg, var(--success-gradient-start) 0%, var(--success-gradient-end) 100%);
+    border-color: var(--success-color);
+    box-shadow: 0 4px 8px var(--shadow-success);
 }
 
 .discount-banner.member-active .banner-icon {
-    color: #4caf50;
+    color: var(--success-color);
     font-weight: bold;
 }
 
 .discount-banner.member-active .banner-content h3 {
-    color: #2e7d32;
+    color: var(--success-dark);
 }
 
 .banner-icon {
@@ -38,31 +38,31 @@
 }
 
 .banner-content h3 {
-    color: #f57f17;
+    color: var(--warning-dark);
     margin: 0 0 0.5rem 0;
     font-size: 1.3rem;
 }
 
 .banner-content p {
-    color: #666;
+    color: var(--text-light);
     margin: 0;
     font-size: 1rem;
 }
 
 .membership-btn {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    border: 3px solid #1e5a8e;
+    border: 3px solid var(--primary-dark);
     transition: all 0.3s;
     white-space: nowrap;
 }
 
 .membership-btn:hover {
-    background-color: #2874b5;
+    background-color: var(--secondary-dark);
     transform: scale(1.05);
 }
 
@@ -74,7 +74,7 @@
 .tours-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 0 2px 4px var(--shadow);
     border-radius: 8px;
     overflow: hidden;
@@ -82,7 +82,7 @@
 
 .tours-table thead {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
 }
 
 .tours-table th {
@@ -153,12 +153,12 @@
 
 .tour-destination {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 .tour-route {
     font-size: 0.85rem;
-    color: #888;
+    color: var(--text-lightest);
     font-style: italic;
     margin-top: 0.25rem;
 }
@@ -167,7 +167,7 @@
 .tour-date-inline {
     display: none;
     font-size: 0.85rem;
-    color: #666;
+    color: var(--text-light);
     margin-top: 0.75rem;
 }
 
@@ -181,18 +181,18 @@
 
 .difficulty-beginner,
 .difficulty-beginner-friendly {
-    background-color: #28a745;
-    color: white;
+    background-color: var(--success-light);
+    color: var(--white);
 }
 
 .difficulty-intermediate {
-    background-color: #ffc107;
-    color: #333;
+    background-color: var(--warning-color);
+    color: var(--text-color);
 }
 
 .difficulty-advanced {
-    background-color: #dc3545;
-    color: white;
+    background-color: var(--error-color);
+    color: var(--white);
 }
 
 .tour-price {
@@ -208,8 +208,8 @@
 
 .boat-btn {
     background-color: var(--primary-color);
-    border: 3px solid #1e5a8e;
-    color: white;
+    border: 3px solid var(--primary-dark);
+    color: var(--white);
     cursor: pointer;
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
@@ -217,13 +217,13 @@
     border-radius: 6px;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     display: inline-block;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px var(--shadow-lg);
 }
 
 .boat-btn:hover {
-    background-color: #2874b5;
+    background-color: var(--secondary-dark);
     transform: scale(1.05);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 12px var(--shadow-xl);
 }
 
 .boat-btn::after {
@@ -232,41 +232,41 @@
 }
 
 .spots-available {
-    color: #28a745;
+    color: var(--success-light);
     font-weight: bold;
 }
 
 .spots-limited {
-    color: #ffc107;
+    color: var(--warning-color);
     font-weight: bold;
 }
 
 .spots-full {
-    color: #dc3545;
+    color: var(--error-color);
     font-weight: bold;
 }
 
 .register-btn {
     background-color: var(--primary-color);
-    color: white;
-    border: 3px solid #1e5a8e;
+    color: var(--white);
+    border: 3px solid var(--primary-dark);
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px var(--shadow-lg);
 }
 
 .register-btn:hover:not(:disabled) {
-    background-color: #2874b5;
+    background-color: var(--secondary-dark);
     transform: scale(1.05);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 12px var(--shadow-xl);
 }
 
 .register-btn:disabled {
-    background-color: #999;
-    border-color: #777;
+    background-color: var(--text-lighter);
+    border-color: var(--border-gray);
     cursor: not-allowed;
     box-shadow: none;
 }

@@ -57,12 +57,12 @@
         border: 2px solid var(--border-color);
         border-radius: 12px;
         padding: 1.25rem;
-        background-color: white;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background-color: var(--white);
+        box-shadow: 0 2px 8px var(--shadow);
     }
 
     .tours-table tbody tr:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 12px var(--shadow-md);
     }
 
     /* Stack all cells */
@@ -70,7 +70,7 @@
         display: block;
         padding: 0.75rem 0;
         border: none;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid var(--border-light);
     }
 
     .tours-table td:last-child {
@@ -126,7 +126,7 @@
     .tour-route {
         font-size: 0.85rem;
         margin-top: 0.4rem;
-        color: #666;
+        color: var(--text-light);
     }
 
     /* Details section */

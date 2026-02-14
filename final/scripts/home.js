@@ -5,7 +5,19 @@ let upcomingTours = [];
 
 // Async function to load tours from JSON with try/catch
 async function loadToursData() {
+    // Show loading message immediately
+    const toursContainer = document.getElementById('upcoming-tours-home');
+    const reportsContainer = document.getElementById('latest-reports');
+
+    if (toursContainer) {
+        toursContainer.innerHTML = '<p class="loading-message">Daten werden geladen...</p>';
+    }
+    if (reportsContainer) {
+        reportsContainer.innerHTML = '<p class="loading-message">Daten werden geladen...</p>';
+    }
+
     try {
+        // import upcomingTours from '../data/upcomingTours.mjs';
         // const response = await fetch('../data/upcoming-tours.json');
         const response = await fetch('data/upcoming-tours.json');
 
@@ -17,8 +29,8 @@ async function loadToursData() {
         upcomingTours = data;
 
         // Display tours and reports after data is loaded
-        displayUpcomingTours();
-        displayLatestReports();
+        // displayUpcomingTours();
+        // displayLatestReports();
 
     } catch (error) {
         console.error('Failed to load tours data:', error);

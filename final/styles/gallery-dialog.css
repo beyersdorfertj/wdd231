@@ -35,8 +35,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
-    border: 3px solid #000;
+    background-color: var(--black);
+    border: 3px solid var(--black);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -66,11 +66,11 @@
     justify-content: center;
     transition: background-color 0.3s, transform 0.3s;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px var(--shadow-xl);
 }
 
 .nav-btn:hover {
-    background-color: white;
+    background-color: var(--white);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -88,7 +88,7 @@
     overflow-x: auto;
     padding: 0.5rem 0;
     flex-shrink: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-color);
     margin-top: auto;
 }
 

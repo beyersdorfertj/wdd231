@@ -115,7 +115,7 @@ function showFullReport(trip) {
     }
 
     function startSlideshow() {
-        slideInterval = setInterval(nextSlide, 4000);
+        slideInterval = setInterval(nextSlide, 3000);
     }
 
     function stopSlideshow() {

@@ -49,7 +49,7 @@
 }
 
 .tour-detail-item span {
-    color: #333;
+    color: var(--text-color);
 }
 
 .form-row {
@@ -71,7 +71,7 @@
     display: block;
     margin-bottom: 0.35rem;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
     font-size: 0.9rem;
 }
 
@@ -123,7 +123,7 @@
 .form-group input[required]:valid,
 .form-group select[required]:valid,
 .form-group textarea[required]:valid {
-    border-left-color: #4caf50;
+    border-left-color: var(--success-color);
 }
 
 .form-group textarea {
@@ -141,26 +141,26 @@
 .submit-btn {
     flex: 1;
     background-color: var(--primary-color);
-    color: white;
-    border: 2px solid #1e5a8e;
+    color: var(--white);
+    border: 2px solid var(--primary-dark);
     padding: 0.6rem 1.25rem;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     font-size: 0.95rem;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--shadow-lg);
 }
 
 .submit-btn:hover {
-    background-color: #2874b5;
+    background-color: var(--secondary-dark);
     transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--shadow-xl);
 }
 
 .submit-btn:disabled {
-    background-color: #999;
-    border-color: #777;
+    background-color: var(--text-lighter);
+    border-color: var(--border-gray);
     cursor: not-allowed;
     opacity: 0.6;
     transform: none;
@@ -168,15 +168,15 @@
 }
 
 .submit-btn:disabled:hover {
-    background-color: #999;
+    background-color: var(--text-lighter);
     transform: none;
     box-shadow: none;
 }
 
 .cancel-btn {
-    background-color: #999;
-    color: white;
-    border: 2px solid #777;
+    background-color: var(--text-lighter);
+    color: var(--white);
+    border: 2px solid var(--border-gray);
     padding: 0.6rem 1.25rem;
     border-radius: 4px;
     cursor: pointer;
@@ -186,7 +186,7 @@
 }
 
 .cancel-btn:hover {
-    background-color: #777;
+    background-color: var(--border-gray);
 }
 
 /* Series Legs Selection */
@@ -205,7 +205,7 @@
 .series-legs-info p {
     margin: 0;
     font-size: 0.85rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 #legs-checkboxes {
@@ -219,14 +219,14 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding: 0.5rem;
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     transition: border-color 0.3s, background-color 0.3s;
 }
 
 .leg-checkbox:hover {
-    background-color: #f0f8ff;
+    background-color: var(--bg-gradient-start);
     border-color: var(--primary-color);
 }
 
@@ -252,12 +252,12 @@
 .leg-details span {
     display: block;
     font-size: 0.8rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 .select-all {
     font-weight: 600;
-    background-color: #e8f4f8;
+    background-color: var(--bg-gradient-start);
     border-color: var(--primary-color);
 }
 
@@ -269,7 +269,7 @@
 .price-summary {
     margin-top: 0.75rem;
     padding: 0.75rem;
-    background-color: white;
+    background-color: var(--white);
     border: 2px solid var(--primary-color);
     border-radius: 6px;
 }
@@ -301,7 +301,7 @@
 
 .success-icon {
     font-size: 4rem;
-    color: #4caf50;
+    color: var(--success-color);
     margin: 0;
     line-height: 1;
 }
@@ -359,13 +359,13 @@
     padding-top: 1rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 /* Full leg styling */
 .leg-full {
     opacity: 0.6;
-    background-color: #f5f5f5 !important;
+    background-color: var(--bg-light) !important;
 }
 
 .leg-full input[type="checkbox"] {
@@ -374,13 +374,13 @@
 
 .leg-full label {
     cursor: not-allowed;
-    color: #999;
+    color: var(--text-lighter);
 }
 
 .full-badge {
     display: inline-block;
-    background-color: #ff5252;
-    color: white;
+    background-color: var(--error-light);
+    color: var(--white);
     padding: 0.15rem 0.4rem;
     border-radius: 3px;
     font-size: 0.7rem;
