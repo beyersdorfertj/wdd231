@@ -1,0 +1,129 @@
+/* Thank You Page Styles */
+
+.confirmation-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--box-shadow);
+}
+
+.confirmation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background-color: #4caf50;
+    color: white;
+    font-size: 3rem;
+    line-height: 80px;
+    border-radius: 50%;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confirmation-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.confirmation-content {
+    text-align: center;
+}
+
+.confirmation-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.booking-summary {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.booking-summary h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.booking-summary ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.booking-summary li {
+    margin: 0.5rem 0;
+}
+
+.reference-note {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #fff3cd;
+    border-left: 4px solid var(--accent-color);
+    text-align: left;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .confirmation-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

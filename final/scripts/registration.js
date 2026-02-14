@@ -451,122 +451,11 @@ form.addEventListener('submit', (e) => {
         data.selectedLegs = selectedLegs.join(',');
     }
 
-    // Close dialog
-    dialog.close();
+    // Generate booking reference
+    const bookingRef = generateBookingReference();
+    data.reference = bookingRef;
 
-    // Prepare thank you message
-    const thankYouDialog = document.getElementById('thank-you-dialog');
-    document.getElementById('thankyou-email').textContent = data.email;
-    document.getElementById('thankyou-reference').textContent = generateBookingReference();
-
-    const isMember = localStorage.getItem('membershipApplication') !== null;
-
-    let detailsHTML = '';
-    let finalPrice = 0;
-
-    if (selectedLegs.length > 1) {
-        // Calculate total price for selected legs (convert string IDs to numbers)
-        const selectedIds = selectedLegs.map(id => parseInt(id));
-        const selectedTours = upcomingTours.filter(t => selectedIds.includes(t.id));
-        const totalPrice = selectedTours.reduce((sum, tour) => {
-            // Extract just the number from price string
-            const priceMatch = tour.price.match(/[\d,]+/);
-            if (priceMatch) {
-                const price = parseFloat(priceMatch[0].replace(/,/g, ''));
-                return sum + price;
-            }
-            return sum;
-        }, 0);
-
-        // Calculate discount
-        const discountPercent = selectedLegs.length === 2 ? 8 : 10;
-        let discountAmount = totalPrice * (discountPercent / 100);
-        finalPrice = totalPrice - discountAmount;
-
-        // Check if user is a member for additional 30% discount
-        if (isMember) {
-            finalPrice = finalPrice * 0.7; // Apply 30% member discount on top of series discount
-        }
-
-        let discountHTML = `
-                <div class="price-line discount">
-                    <span>Series discount (${discountPercent}%):</span>
-                    <span>-€${discountAmount.toFixed(2)}</span>
-                </div>`;
-
-        if (isMember) {
-            const memberDiscount = (totalPrice - discountAmount) * 0.3;
-            discountHTML += `
-                <div class="price-line discount">
-                    <span>Member discount (30%):</span>
-                    <span>-€${memberDiscount.toFixed(2)}</span>
-                </div>`;
-        }
-
-        detailsHTML = `
-            <div class="price-breakdown">
-                <h5>Price Breakdown</h5>
-                <div class="price-line">
-                    <span>Selected ${selectedLegs.length} legs:</span>
-                    <span>€${totalPrice.toFixed(2)}</span>
-                </div>
-                ${discountHTML}
-                <div class="price-line total">
-                    <strong>Total Price:</strong>
-                    <strong>€${finalPrice.toFixed(2)}</strong>
-                </div>
-            </div>
-        `;
-    } else {
-        // Single tour
-        const tour = upcomingTours.find(t => t.id === data.tourId);
-        if (tour) {
-            const priceMatch = tour.price.match(/[\d,]+/);
-            if (priceMatch) {
-                const originalPrice = parseFloat(priceMatch[0].replace(/,/g, ''));
-
-                if (isMember) {
-                    // Show member discount
-                    finalPrice = originalPrice * 0.7; // 30% discount
-                    const discount = originalPrice * 0.3;
-
-                    detailsHTML = `
-                        <div class="price-breakdown">
-                            <h5>Price Breakdown</h5>
-                            <div class="price-line">
-                                <span>Tour price:</span>
-                                <span>€${originalPrice.toFixed(2)}</span>
-                            </div>
-                            <div class="price-line discount">
-                                <span>Member discount (30%):</span>
-                                <span>-€${discount.toFixed(2)}</span>
-                            </div>
-                            <div class="price-line total">
-                                <strong>Total Price:</strong>
-                                <strong>€${finalPrice.toFixed(2)}</strong>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    // No discount for non-members
-                    finalPrice = originalPrice;
-                    detailsHTML = `
-                        <div class="price-breakdown">
-                            <h5>Price Breakdown</h5>
-                            <div class="price-line total">
-                                <strong>Total Price:</strong>
-                                <strong>€${finalPrice.toFixed(2)}</strong>
-                            </div>
-                        </div>
-                    `;
-                }
-            }
-        }
-    }
-
-    document.getElementById('thankyou-details').innerHTML = detailsHTML;
-
-    // Update available spots
+    // Update available spots in localStorage
     const participants = parseInt(data.participants) || 1;
     if (selectedLegs.length > 0) {
         // Update spots for all selected legs
@@ -578,17 +467,12 @@ form.addEventListener('submit', (e) => {
         saveBookedSpots(data.tourId, participants);
     }
 
-    // Close registration dialog first
+    // Build query string for navigation
+    const queryParams = new URLSearchParams(data).toString();
+
+    // Close dialog and navigate to thank you page
     dialog.close();
-
-    // Refresh the tours table immediately
-    displayTours();
-
-    // Show thank you dialog
-    thankYouDialog.showModal();
-
-    // Reset form
-    form.reset();
+    window.location.href = `thankyou.html?${queryParams}`;
 });
 
 // Close button handler

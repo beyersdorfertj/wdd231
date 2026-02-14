@@ -1,6 +1,33 @@
 // Display sailing trip reports
 
-import tripReports from '../data/trips.mjs';
+// Global variable to store trip reports
+let tripReports = [];
+
+// Async function to load trip reports from JSON with try/catch
+async function loadTripReports() {
+    try {
+        const response = await fetch('data/trips.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        tripReports = data;
+
+        // Display trips after data is loaded
+        displayTrips();
+
+    } catch (error) {
+        console.error('Failed to load trip reports:', error);
+
+        // Display error message to user
+        const container = document.getElementById('trip-reports');
+        if (container) {
+            container.innerHTML = '<p style="color: #d32f2f; text-align: center; padding: 2rem;">Unable to load trip reports. Please try again later.</p>';
+        }
+    }
+}
 
 function createTripCard(trip) {
     const card = document.createElement('article');
@@ -138,4 +165,5 @@ function displayTrips() {
     });
 }
 
-displayTrips();
+// Initialize - load trip reports
+loadTripReports();

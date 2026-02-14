@@ -1,6 +1,42 @@
 // Home Page - Display upcoming tours and latest reports
 
-import upcomingTours from '../data/upcoming-tours.mjs';
+// Global variable to store tours data
+let upcomingTours = [];
+
+// Async function to load tours from JSON with try/catch
+async function loadToursData() {
+    try {
+        // const response = await fetch('../data/upcoming-tours.json');
+        const response = await fetch('data/upcoming-tours.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        upcomingTours = data;
+
+        // Display tours and reports after data is loaded
+        displayUpcomingTours();
+        displayLatestReports();
+
+    } catch (error) {
+        console.error('Failed to load tours data:', error);
+
+        // Display error message to user
+        const toursContainer = document.getElementById('upcoming-tours-home');
+        const reportsContainer = document.getElementById('latest-reports');
+
+        const errorMessage = '<p style="color: #d32f2f;">Unable to load tours data. Please try again later.</p>';
+
+        if (toursContainer) {
+            toursContainer.innerHTML = errorMessage;
+        }
+        if (reportsContainer) {
+            reportsContainer.innerHTML = errorMessage;
+        }
+    }
+}
 
 // Display next 3 upcoming tours
 function displayUpcomingTours() {
@@ -104,6 +140,5 @@ function displayLatestReports() {
     }).join('');
 }
 
-// Initialize
-displayUpcomingTours();
-displayLatestReports();
+// Initialize - load data and display
+loadToursData();

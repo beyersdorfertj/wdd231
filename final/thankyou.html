@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/houses-logo.svg" type="image/svg+xml">
+    <title>Registration Confirmed - Sailing Club Friedrichsdorf</title>
+    <meta name="author" content="Thomas Jörg Beyersdorfer">
+    <meta name="description"
+        content="Your tour registration has been confirmed. Thank you for booking with Sailing Club Friedrichsdorf.">
+    <meta property="og:title" content="Registration Confirmed - Sailing Club Friedrichsdorf">
+    <meta property="og:description"
+        content="Your tour registration has been confirmed. Thank you for booking with Sailing Club Friedrichsdorf.">
+    <meta property="og:image" content="https://beyersdorfertj.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://sailingclub-friedrichsdorf.com/thankyou.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/frame.css">
+    <link rel="stylesheet" href="styles/frame-small.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/frame-large.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <link rel="stylesheet" href="styles/registration-form.css">
+    <script src="scripts/thankyou.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="24" height="24" fetchpriority="high">
+        <span>Sailing Club Friedrichsdorf</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Tour Registration</a></li>
+            <li><a href="archive.html">Tour Archive</a></li>
+            <li><a href="fleet.html">Fleet Information</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="confirmation-container">
+            <div class="confirmation-header">
+                <div class="checkmark">✓</div>
+                <h1>Registration Successful</h1>
+            </div>
+
+            <div class="confirmation-content">
+                <h2>Thank you for your registration!</h2>
+                <p>We have received your registration and will contact you at <strong id="confirm-email"></strong> to
+                    confirm your booking.</p>
+
+                <div id="booking-details"></div>
+
+                <p class="reference-note">Reference: <strong id="confirm-reference"></strong></p>
+
+                <div class="action-buttons">
+                    <a href="registration.html" class="btn">Register Another Tour</a>
+                    <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h2>Sailing Club<br>Friedrichsdorf</h2>
+            <p>Hugenottenstraße 55</p>
+            <p>61381 Friedrichsdorf</p>
+            <p>info@sailing-friedrichsdorf.de</p>
+            <p>+49 6172 731-0</p>
+        </div>
+        <div class="social">
+            <a href="https://github.com/beyersdorfertj" target="_blank"><img src="../images/github.svg"
+                    alt="GitHub of Author" width="44" height="44"></a>
+            <a href="https://linkedin.com/in/jörg-beyersdorfer-7b5994339" target="_blank"><img
+                    src="../images/linkedin.svg" alt="LinkedIn to Author" width="44" height="44"></a>
+            <a href="https://wa.me/4917614492696" target="_blank"><img src="../images/whatsapp.svg"
+                    alt="WhatsApp to Author" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Final Project</p>
+            <p>Jörg Beyersdorfer</p>
+            <p>&copy; <span id="currentYear"></span> Sailing Club Friedrichsdorf</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
